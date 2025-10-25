@@ -1,0 +1,57 @@
+{
+  "tabs": [
+    {
+      "id": "greetings",
+      "title": "Greetings",
+      "items": [
+        "Hello",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "How are you?",
+        "Nice to meet you",
+        "Welcome"
+      ]
+    },
+    {
+      "id": "common",
+      "title": "Common Phrases",
+      "items": [
+        "Thank you",
+        "You're welcome",
+        "Please",
+        "Excuse me",
+        "I'm sorry",
+        "No problem",
+        "See you later"
+      ]
+    },
+    {
+      "id": "questions",
+      "title": "Questions",
+      "items": [
+        "What is your name?",
+        "Where are you from?",
+        "How old are you?",
+        "What time is it?",
+        "Can you help me?",
+        "Do you speak English?",
+        "How much does it cost?"
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers",
+      "items": [
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Ten",
+        "Twenty",
+        "Hundred"
+      ]
+    }
+  ]
+}
