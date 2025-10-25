@@ -1,56 +1,58 @@
 {
+  "targetLanguage": "French",
+  "targetLanguageCode": "fr-FR",
   "tabs": [
     {
       "id": "greetings",
       "title": "Greetings",
       "items": [
-        "Hello",
-        "Good morning",
-        "Good afternoon",
-        "Good evening",
-        "How are you?",
-        "Nice to meet you",
-        "Welcome"
+        { "english": "Hello", "translation": "Bonjour" },
+        { "english": "Good morning", "translation": "Bonjour" },
+        { "english": "Good afternoon", "translation": "Bon après-midi" },
+        { "english": "Good evening", "translation": "Bonsoir" },
+        { "english": "How are you?", "translation": "Comment allez-vous?" },
+        { "english": "Nice to meet you", "translation": "Enchanté" },
+        { "english": "Welcome", "translation": "Bienvenue" }
       ]
     },
     {
       "id": "common",
       "title": "Common Phrases",
       "items": [
-        "Thank you",
-        "You're welcome",
-        "Please",
-        "Excuse me",
-        "I'm sorry",
-        "No problem",
-        "See you later"
+        { "english": "Thank you", "translation": "Merci" },
+        { "english": "You're welcome", "translation": "De rien" },
+        { "english": "Please", "translation": "S'il vous plaît" },
+        { "english": "Excuse me", "translation": "Excusez-moi" },
+        { "english": "I'm sorry", "translation": "Je suis désolé" },
+        { "english": "No problem", "translation": "Pas de problème" },
+        { "english": "See you later", "translation": "À plus tard" }
       ]
     },
     {
       "id": "questions",
       "title": "Questions",
       "items": [
-        "What is your name?",
-        "Where are you from?",
-        "How old are you?",
-        "What time is it?",
-        "Can you help me?",
-        "Do you speak English?",
-        "How much does it cost?"
+        { "english": "What is your name?", "translation": "Comment vous appelez-vous?" },
+        { "english": "Where are you from?", "translation": "D'où venez-vous?" },
+        { "english": "How old are you?", "translation": "Quel âge avez-vous?" },
+        { "english": "What time is it?", "translation": "Quelle heure est-il?" },
+        { "english": "Can you help me?", "translation": "Pouvez-vous m'aider?" },
+        { "english": "Do you speak English?", "translation": "Parlez-vous anglais?" },
+        { "english": "How much does it cost?", "translation": "Combien ça coûte?" }
       ]
     },
     {
       "id": "numbers",
       "title": "Numbers",
       "items": [
-        "One",
-        "Two",
-        "Three",
-        "Four",
-        "Five",
-        "Ten",
-        "Twenty",
-        "Hundred"
+        { "english": "One", "translation": "Un" },
+        { "english": "Two", "translation": "Deux" },
+        { "english": "Three", "translation": "Trois" },
+        { "english": "Four", "translation": "Quatre" },
+        { "english": "Five", "translation": "Cinq" },
+        { "english": "Ten", "translation": "Dix" },
+        { "english": "Twenty", "translation": "Vingt" },
+        { "english": "Hundred", "translation": "Cent" }
       ]
     }
   ]

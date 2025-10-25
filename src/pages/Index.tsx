@@ -18,7 +18,7 @@ const Index = () => {
             Language Learning
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Click the play button to hear each phrase pronounced. Practice makes perfect!
+            Learn English and {phrasesData.targetLanguage}. Click the play buttons to hear native pronunciation!
           </p>
         </header>
 
@@ -43,7 +43,12 @@ const Index = () => {
               className="mt-8 space-y-3 animate-in fade-in-50 duration-500"
             >
               {tab.items.map((item, index) => (
-                <PhraseItem key={index} text={item} />
+                <PhraseItem 
+                  key={index} 
+                  english={item.english} 
+                  translation={item.translation}
+                  languageCode={phrasesData.targetLanguageCode}
+                />
               ))}
             </TabsContent>
           ))}
