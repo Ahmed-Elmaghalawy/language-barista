@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PhraseItem } from "@/components/PhraseItem";
+import { NumberPractice } from "@/components/NumberPractice";
 import { MessageSquare } from "lucide-react";
 import phrasesData from "@/data/phrases.json";
 
@@ -24,7 +25,7 @@ const Index = () => {
 
         {/* Tabs */}
         <Tabs defaultValue={phrasesData.tabs[0].id} className="w-full">
-          <TabsList className="w-full grid grid-cols-2 md:grid-cols-4 gap-2 bg-card/50 backdrop-blur-sm p-2 h-auto">
+          <TabsList className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 bg-card/50 backdrop-blur-sm p-2 h-auto">
             {phrasesData.tabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
@@ -34,6 +35,12 @@ const Index = () => {
                 {tab.title}
               </TabsTrigger>
             ))}
+            <TabsTrigger
+              value="numbers"
+              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 py-3 rounded-lg font-medium"
+            >
+              Numbers
+            </TabsTrigger>
           </TabsList>
 
           {phrasesData.tabs.map((tab) => (
@@ -52,6 +59,16 @@ const Index = () => {
               ))}
             </TabsContent>
           ))}
+
+          <TabsContent 
+            value="numbers"
+            className="mt-8 animate-in fade-in-50 duration-500"
+          >
+            <NumberPractice 
+              languageCode={phrasesData.targetLanguageCode}
+              languageName={phrasesData.targetLanguage}
+            />
+          </TabsContent>
         </Tabs>
 
         {/* Footer */}
