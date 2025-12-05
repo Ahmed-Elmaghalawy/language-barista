@@ -62,6 +62,17 @@
         { "english": "Thank you for coming.", "translation": "Merci d'être venu(e)." },
         { "english": "See you next time!", "translation": "À la prochaine !" }
       ]
+    },
+    {
+      "id": "serving2",
+      "title": "Serving & Ending2",
+      "items": [
+        { "english": "Here's your drink.", "translation": "Voici votre boisson." },
+        { "english": "Enjoy!", "translation": "Bon appétit ! / Régalez-vous !" },
+        { "english": "Have a nice day!", "translation": "Bonne journée !" },
+        { "english": "Thank you for coming.", "translation": "Merci d'être venu(e)." },
+        { "english": "See you next time!", "translation": "À la prochaine !" }
+      ]
     }
   ]
 }
