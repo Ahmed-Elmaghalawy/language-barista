@@ -1,173 +1,198 @@
 {
     "ui": {
-        "title": "Apprentissage des langues",
-        "subtitle": "Apprenez l'anglais et le {{language}}. Cliquez sur les boutons de lecture pour entendre la prononciation native !",
-        "tabs": {
-            "greetings": "Salutations",
-            "orders": "Commandes",
-            "recommending": "Recommandations",
-            "confirming": "Confirmation",
-            "serving": "Service",
-            "numbers": "Nombres"
-        },
-        "numberPractice": {
-            "title": "Pratique des nombres",
-            "subtitle": "Tapez n'importe quel nombre pour l'entendre prononcé dans les deux langues",
-            "placeholder": "Tapez un nombre (ex: 42, 100, 2024)",
-            "englishLabel": "Anglais"
-        },
-        "footer": "Utilisation de l'API Web Speech pour la fonctionnalité de synthèse vocale",
-        "language_name": "Français",
+        "title": "Barista Master Guide",
+        "language_name": "French",
         "language_code": "fr-FR",
         "dir": "ltr"
     },
     "phrases": {
         "greetings": {
-            "title": "Salutations et Accueil",
+            "title": "Greetings & Welcome",
+            "icon": "👋",
             "items": [
-                {
-                    "english": "Good morning / Good evening",
-                    "translation": "Bonjour / Bonsoir"
-                },
-                {
-                    "english": "Hi, how are you?",
-                    "translation": "Salut, comment ça va ?"
-                },
                 {
                     "english": "Welcome to Caribou!",
                     "translation": "Bienvenue chez Caribou !"
                 },
                 {
-                    "english": "How can I help you today?",
-                    "translation": "Comment puis-je vous aider aujourd'hui ?"
+                    "english": "Good morning / Good evening",
+                    "translation": "Bonjour / Bonsoir"
                 },
                 {
-                    "english": "What would you like to order?",
-                    "translation": "Que souhaitez-vous commander ?"
+                    "english": "Hi, how are you today?",
+                    "translation": "Salut, comment allez-vous aujourd'hui ?"
+                },
+                {
+                    "english": "How can I help you?",
+                    "translation": "Comment puis-je vous aider ?"
                 }
             ]
         },
-        "orders": {
-            "title": "Prendre les commandes",
+        "ordering_barista": {
+            "title": "Taking Orders (Barista)",
+            "icon": "☕",
             "items": [
                 {
-                    "english": "What would you like today?",
-                    "translation": "Que voulez-vous aujourd'hui ?"
+                    "english": "What can I get for you?",
+                    "translation": "Que puis-je vous servir ?"
                 },
                 {
                     "english": "Would you like it hot or iced?",
-                    "translation": "Vous le voulez chaud ou glacé ?"
+                    "translation": "Le voulez-vous chaud ou glacé ?"
+                },
+                {
+                    "english": "What size: small, medium, or large?",
+                    "translation": "Quelle taille : petit, moyen ou grand ?"
+                },
+                {
+                    "english": "Any specific milk? We have oats, soy, and almond.",
+                    "translation": "Quel lait souhaitez-vous ? Nous avons avoine, soja et amande."
+                },
+                {
+                    "english": "Would you like extra sugar or sweetener?",
+                    "translation": "Voulez-vous du sucre ou un édulcorant ?"
+                },
+                {
+                    "english": "Do you want whipped cream on top?",
+                    "translation": "Voulez-vous de la crème fouettée dessus ?"
+                },
+                {
+                    "english": "Anything else for you?",
+                    "translation": "Autre chose ?"
                 },
                 {
                     "english": "For here or to go?",
                     "translation": "Sur place ou à emporter ?"
-                },
-                {
-                    "english": "What size — small, medium, or large?",
-                    "translation": "Quelle taille — petit, moyen ou grand ?"
-                },
-                {
-                    "english": "With milk or without?",
-                    "translation": "Avec du lait ou sans ?"
-                },
-                {
-                    "english": "Any sugar or sweetener?",
-                    "translation": "Du sucre ou de l'édulcorant ?"
-                },
-                {
-                    "english": "Would you like whipped cream on top?",
-                    "translation": "Voulez-vous de la crème fouettée ?"
-                },
-                {
-                    "english": "Anything else?",
-                    "translation": "Autre chose ?"
-                },
-                {
-                    "english": "That'll be 18 dirhams, please.",
-                    "translation": "Ça fera 18 dirhams, s'il vous plaît."
-                },
-                {
-                    "english": "You can pay by card or cash.",
-                    "translation": "Vous pouvez payer par carte ou en espèces."
                 }
             ]
         },
-        "recommending": {
-            "title": "Recommander",
+        "ordering_customer": {
+            "title": "Ordering (Customer)",
+            "icon": "👤",
             "items": [
                 {
-                    "english": "Would you like to try our new drink?",
-                    "translation": "Voulez-vous essayer notre nouvelle boisson ?"
+                    "english": "I'd like a large latte, please.",
+                    "translation": "Je voudrais un grand latte, s'il vous plaît."
                 },
                 {
-                    "english": "It's one of our bestsellers.",
-                    "translation": "C'est l'un de nos best-sellers."
+                    "english": "Can I have a double shot of espresso?",
+                    "translation": "Puis-je avoir un double espresso ?"
                 },
                 {
-                    "english": "It goes well with a muffin.",
-                    "translation": "Ça va bien avec un muffin."
+                    "english": "Make it with oat milk, please.",
+                    "translation": "Avec du lait d'avoine, s'il vous plaît."
                 },
                 {
-                    "english": "We also have non-dairy milk.",
-                    "translation": "Nous avons aussi du lait végétal."
+                    "english": "Is there any sugar in this?",
+                    "translation": "Y a-t-il du sucre dans ceci ?"
                 },
                 {
-                    "english": "You can make it extra shot if you like.",
-                    "translation": "Vous pouvez ajouter un shot supplémentaire si vous voulez."
+                    "english": "I'll have a croissant with my coffee.",
+                    "translation": "Je vais prendre un croissant avec mon café."
+                },
+                {
+                    "english": "Where can I find the napkins?",
+                    "translation": "Où sont les serviettes ?"
+                },
+                {
+                    "english": "Can I have a sleeve for my cup?",
+                    "translation": "Puis-je avoir un protège-gobelet ?"
                 }
             ]
         },
-        "confirming": {
-            "title": "Confirmer",
+        "payment": {
+            "title": "Payment & Checkout",
+            "icon": "💳",
             "items": [
                 {
-                    "english": "So, that's one large cappuccino, right?",
-                    "translation": "Donc, un grand cappuccino, c'est ça ?"
+                    "english": "That will be 25 dirhams.",
+                    "translation": "Ça fera 25 dirhams."
                 },
                 {
-                    "english": "Did you say caramel or vanilla?",
-                    "translation": "Avez-vous dit caramel ou vanille ?"
+                    "english": "Would you like to pay by card or cash?",
+                    "translation": "Voulez-vous payer par carte ou en espèces ?"
                 },
                 {
-                    "english": "Let me confirm your order.",
-                    "translation": "Laissez-moi confirmer votre commande."
+                    "english": "Can I have a receipt, please?",
+                    "translation": "Puis-je avoir un reçu, s'il vous plaît ?"
                 },
                 {
-                    "english": "Sorry, could you repeat that please?",
-                    "translation": "Désolé, pouvez-vous répéter s'il vous plaît ?"
+                    "english": "Tap your card here.",
+                    "translation": "Posez votre carte ici."
                 },
                 {
-                    "english": "We're out of that for now.",
-                    "translation": "Nous n'en avons plus pour le moment."
-                },
-                {
-                    "english": "I'll check if we still have that.",
-                    "translation": "Je vais vérifier s'il nous en reste."
+                    "english": "Keep the change.",
+                    "translation": "Gardez la monnaie."
                 }
             ]
         },
-        "serving": {
-            "title": "Service et Fin",
+        "recommendations": {
+            "title": "Barista Suggestions",
+            "icon": "✨",
             "items": [
                 {
-                    "english": "Here's your drink.",
-                    "translation": "Voici votre boisson."
+                    "english": "I recommend our signature blend.",
+                    "translation": "Je recommande notre mélange signature."
                 },
                 {
-                    "english": "Enjoy!",
-                    "translation": "Profitez-en ! / Bon appétit !"
+                    "english": "This drink is very popular today.",
+                    "translation": "Cette boisson est très populaire aujourd'hui."
                 },
                 {
-                    "english": "Have a nice day!",
-                    "translation": "Bonne journée !"
+                    "english": "It goes great with a blueberry muffin.",
+                    "translation": "Ça va très bien avec un muffin aux myrtilles."
                 },
                 {
-                    "english": "Thank you for coming.",
-                    "translation": "Merci d'être venu."
+                    "english": "Would you like to try our new seasonal latte?",
+                    "translation": "Voulez-vous essayer notre nouveau latte de saison ?"
+                }
+            ]
+        },
+        "common_questions": {
+            "title": "Questions & Problems",
+            "icon": "❓",
+            "items": [
+                {
+                    "english": "What's the Wi-Fi password?",
+                    "translation": "Quel est le mot de passe du Wi-Fi ?"
                 },
                 {
-                    "english": "See you next time!",
-                    "translation": "À la prochaine !"
+                    "english": "Where is the restroom?",
+                    "translation": "Où sont les toilettes ?"
+                },
+                {
+                    "english": "Is this drink dairy-free?",
+                    "translation": "Cette boisson est-elle sans produits laitiers ?"
+                },
+                {
+                    "english": "My drink is too cold/hot.",
+                    "translation": "Ma boisson est trop froide/chaude."
+                },
+                {
+                    "english": "I ordered a flat white, but this is a cappuccino.",
+                    "translation": "J'ai commandé un flat white, mais c'est un cappuccino."
+                }
+            ]
+        },
+        "farewell": {
+            "title": "Farewell & Goodbye",
+            "icon": "👋",
+            "items": [
+                {
+                    "english": "Enjoy your drink!",
+                    "translation": "Bonne dégustation !"
+                },
+                {
+                    "english": "Have a wonderful day!",
+                    "translation": "Passez une excellente journée !"
+                },
+                {
+                    "english": "Thank you for visiting!",
+                    "translation": "Merci de votre visite !"
+                },
+                {
+                    "english": "See you next time.",
+                    "translation": "À la prochaine."
                 }
             ]
         }

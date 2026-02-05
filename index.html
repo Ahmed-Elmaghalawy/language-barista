@@ -1,52 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barista Language Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Barista Pro Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            50: '#f9fafb', 100: '#f3f4f6', 200: '#e5e7eb', 300: '#d1d5db',
+                            400: '#9ca3af', 500: '#6b7280', 600: '#4b5563', 700: '#374151',
+                            800: '#1f2937', 900: '#111827', 950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-        }
-
-        h1,
-        h2 {
-            font-family: 'Outfit', sans-serif;
-        }
-
-        .sheet-container {
-            box-shadow: 0 0 50px -12px rgb(0 0 0 / 0.1);
+            transition: background-color 0.2s, color 0.2s;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .word-span {
             cursor: pointer;
-            transition: all 0.2s;
-            padding: 0 2px;
-            border-radius: 4px;
-        }
-
-        .word-span:hover {
-            background-color: rgba(59, 130, 246, 0.1);
-            color: #2563eb;
+            padding: 1px 2px;
+            border-radius: 2px;
+            display: inline-block;
         }
 
         .highlight-word {
-            background-color: #fef08a !important;
-            /* Yellow-200 */
+            background-color: #fbbf24 !important;
             color: #000 !important;
-            font-weight: 600;
         }
 
-        .row-hover:hover {
-            background-color: #f8fafc;
+        .dark .highlight-word {
+            background-color: #f59e0b !important;
+            color: #000 !important;
         }
 
-        /* Hide scrollbar but keep functionality */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -55,66 +55,110 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        .sticky-col {
+            position: sticky;
+            left: 0;
+            z-index: 20;
+            background-color: inherit;
+        }
+
+        .column-hidden {
+            display: none !important;
+        }
+
+        /* Ensure text wrapping for long translations */
+        td {
+            white-space: normal;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 
-<body class="bg-[#f3f4f6] min-h-screen py-8 px-4">
-    <div class="max-w-[1400px] mx-auto">
+<body class="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-gray-200 min-h-screen">
+    <div class="flex flex-col h-screen max-w-[100vw] overflow-hidden">
         <!-- Header -->
-        <header class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div>
-                <h1 class="text-4xl font-bold text-slate-900 tracking-tight">Barista Language Guide</h1>
-                <p class="text-slate-500 mt-2">Interactive spreadsheet learning system. Click rows for Full Sentence
-                    TTS, or click individual words.</p>
+        <header
+            class="flex items-center justify-between px-4 py-2 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shrink-0 z-50">
+            <div class="flex items-center gap-2">
+                <span class="text-sm font-bold tracking-tight text-gray-900 dark:text-white">Pro Guide</span>
             </div>
 
-            <!-- Language Controls -->
-            <div class="flex items-center gap-3 bg-white p-2 rounded-2xl shadow-sm border border-slate-200">
-                <span class="text-xs font-bold text-slate-400 uppercase ml-2">Target Language:</span>
-                <button onclick="changeLanguage('ar')"
-                    class="lang-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all"
-                    data-target="ar">Arabic</button>
-                <button onclick="changeLanguage('fr')"
-                    class="lang-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all"
-                    data-target="fr">French</button>
-                <button onclick="changeLanguage('ru')"
-                    class="lang-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all"
-                    data-target="ru">Russian</button>
+            <div class="flex items-center gap-2">
+                <!-- Column Switches Trigger -->
+                <button id="col-settings-btn"
+                    class="p-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-xs font-semibold">
+                    Cols
+                </button>
+                <!-- Theme Toggle -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-colors">
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+                </button>
             </div>
         </header>
 
-        <!-- The "Sheet" -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-2xl sheet-container">
-            <div class="overflow-x-auto no-scrollbar">
-                <table class="w-full border-collapse">
-                    <thead>
-                        <tr class="bg-slate-50 border-b border-slate-200">
-                            <th
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-400 uppercase tracking-wider w-12">
-                                #</th>
-                            <th
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-400 uppercase tracking-wider w-48">
-                                Category</th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">
-                                English Phrase (Original)</th>
-                            <th id="target-header"
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">
-                                Target Phrase</th>
-                            <th
-                                class="px-6 py-4 text-center text-xs font-bold text-slate-400 uppercase tracking-wider w-24">
-                                TTS</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sheet-body">
-                        <!-- Content will be injected here -->
-                    </tbody>
-                </table>
+        <!-- Column Settings Modal (Simple) -->
+        <div id="col-modal"
+            class="hidden absolute top-12 right-4 w-48 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-2xl p-4 z-[100]">
+            <h3 class="text-[10px] font-bold uppercase text-gray-400 mb-3">Visible Columns</h3>
+            <div class="space-y-2">
+                <label class="flex items-center gap-2 text-xs">
+                    <input type="checkbox" checked data-col="1" class="col-toggle"> English
+                </label>
+                <label class="flex items-center gap-2 text-xs">
+                    <input type="checkbox" checked data-col="2" class="col-toggle"> French
+                </label>
+                <label class="flex items-center gap-2 text-xs">
+                    <input type="checkbox" checked data-col="3" class="col-toggle"> Russian
+                </label>
+                <label class="flex items-center gap-2 text-xs">
+                    <input type="checkbox" checked data-col="4" class="col-toggle"> Hindi
+                </label>
+                <label class="flex items-center gap-2 text-xs">
+                    <input type="checkbox" checked data-col="5" class="col-toggle"> Arabic
+                </label>
             </div>
         </div>
 
-        <footer class="mt-8 text-center">
-            <p class="text-slate-400 text-sm">💡 Tip: Click on any word to hear it individually and see its translation.
-            </p>
+        <!-- Main Content Area -->
+        <main class="flex-1 overflow-auto relative no-scrollbar">
+            <table id="master-table" class="w-full border-separate border-spacing-0 table-fixed min-w-[900px]">
+                <thead>
+                    <tr
+                        class="bg-gray-50 dark:bg-gray-900 text-[10px] uppercase font-bold text-gray-500 tracking-wider">
+                        <th
+                            class="sticky top-0 left-0 z-30 px-3 py-2 text-left bg-gray-50 dark:bg-gray-900 border-b border-r border-gray-200 dark:border-gray-800 w-10">
+                            #</th>
+                        <th
+                            class="col-1 sticky top-0 left-10 z-30 px-3 py-2 text-left bg-gray-50 dark:bg-gray-900 border-b border-r border-gray-200 dark:border-gray-800 w-32">
+                            English</th>
+                        <th
+                            class="col-2 sticky top-0 z-20 px-3 py-2 text-left bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+                            French</th>
+                        <th
+                            class="col-3 sticky top-0 z-20 px-3 py-2 text-left bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+                            Russian</th>
+                        <th
+                            class="col-4 sticky top-0 z-20 px-3 py-2 text-left bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+                            Hindi (Eng)</th>
+                        <th
+                            class="col-5 sticky top-0 z-20 px-3 py-2 text-right bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+                            Arabic (عربي)</th>
+                    </tr>
+                </thead>
+                <tbody id="sheet-body" class="text-xs">
+                    <!-- Dynamic Rows -->
+                </tbody>
+            </table>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="px-4 py-1.5 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 text-[10px] text-gray-500 flex justify-between shrink-0">
+            <span>Tap word/sentence for audio • Click speaker icon for full play</span>
+            <span class="font-mono">v3.0 Multi</span>
         </footer>
     </div>
 

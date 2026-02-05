@@ -1,8 +1,8 @@
 {
     "ui": {
         "title": "Barista Master Guide",
-        "language_name": "Russian",
-        "language_code": "ru-RU",
+        "language_name": "Hindi",
+        "language_code": "hi-IN",
         "dir": "ltr"
     },
     "phrases": {
@@ -12,19 +12,19 @@
             "items": [
                 {
                     "english": "Welcome to Caribou!",
-                    "translation": "Добро пожаловать в Caribou!"
+                    "translation": "Caribou mein aapka swagat hai!"
                 },
                 {
                     "english": "Good morning / Good evening",
-                    "translation": "Доброе утро / Добрый вечер"
+                    "translation": "Shubh prabhat / Shubh sandhya"
                 },
                 {
                     "english": "Hi, how are you today?",
-                    "translation": "Привет, как дела сегодня?"
+                    "translation": "Namaste, aap aaj kaise hain?"
                 },
                 {
                     "english": "How can I help you?",
-                    "translation": "Чем я могу вам помочь?"
+                    "translation": "Main aapki kya madad kar sakta hoon?"
                 }
             ]
         },
@@ -34,35 +34,35 @@
             "items": [
                 {
                     "english": "What can I get for you?",
-                    "translation": "Что я могу для вас заказать?"
+                    "translation": "Main aapke liye kya la sakta hoon?"
                 },
                 {
                     "english": "Would you like it hot or iced?",
-                    "translation": "Вам горячий или со льдом?"
+                    "translation": "Kya aap ise garam ya thanda lena pasand karenge?"
                 },
                 {
                     "english": "What size: small, medium, or large?",
-                    "translation": "Какой размер: маленький, средний или большой?"
+                    "translation": "Kitna bada: chhota, madhyam, ya bada?"
                 },
                 {
                     "english": "Any specific milk? We have oats, soy, and almond.",
-                    "translation": "Какое-нибудь особенное молоко? У нас есть овсяное, соевое и миндальное."
+                    "translation": "Koi vishesh doodh? Humare paas oats, soy aur badaam ka doodh hai."
                 },
                 {
                     "english": "Would you like extra sugar or sweetener?",
-                    "translation": "Хотите добавить сахар или подсластитель?"
+                    "translation": "Kya aap extra cheeni ya sweetener chahenge?"
                 },
                 {
                     "english": "Do you want whipped cream on top?",
-                    "translation": "Хотите взбитые сливки сверху?"
+                    "translation": "Kya aap upar whipped cream chahte hain?"
                 },
                 {
                     "english": "Anything else for you?",
-                    "translation": "Что-нибудь еще?"
+                    "translation": "Aapke liye kuch aur?"
                 },
                 {
                     "english": "For here or to go?",
-                    "translation": "Здесь или с собой?"
+                    "translation": "Yahan ke liye ya le jaane ke liye?"
                 }
             ]
         },
@@ -72,31 +72,31 @@
             "items": [
                 {
                     "english": "I'd like a large latte, please.",
-                    "translation": "Я бы хотел большой латте, пожалуйста."
+                    "translation": "Mujhe ek bada latte chahiye, kripya."
                 },
                 {
                     "english": "Can I have a double shot of espresso?",
-                    "translation": "Можно мне двойной эспрессо?"
+                    "translation": "Kya mujhe espresso ka double shot mil sakta hai?"
                 },
                 {
                     "english": "Make it with oat milk, please.",
-                    "translation": "Сделайте на овсяном молоке, пожалуйста."
+                    "translation": "Ise oat milk ke saath banayein, kripya."
                 },
                 {
                     "english": "Is there any sugar in this?",
-                    "translation": "Здесь есть сахар?"
+                    "translation": "Kya ismein cheeni hai?"
                 },
                 {
                     "english": "I'll have a croissant with my coffee.",
-                    "translation": "Я возьму круассан к кофе."
+                    "translation": "Main apni coffee ke saath ek croissant loonga."
                 },
                 {
                     "english": "Where can I find the napkins?",
-                    "translation": "Где я могу найти салфетки?"
+                    "translation": "Mujhe napkins kahan mil sakte hain?"
                 },
                 {
                     "english": "Can I have a sleeve for my cup?",
-                    "translation": "Можно мне манжету (холдер) для стакана?"
+                    "translation": "Kya mujhe apne cup ke liye sleeve mil sakti hai?"
                 }
             ]
         },
@@ -106,23 +106,23 @@
             "items": [
                 {
                     "english": "That will be 25 dirhams.",
-                    "translation": "С вас 25 дирхамов."
+                    "translation": "Yeh 25 dirhams hoga."
                 },
                 {
                     "english": "Would you like to pay by card or cash?",
-                    "translation": "Вы заходите оплатить картой или наличными?"
+                    "translation": "Kya aap card ya nakad se bhugtan karna chahenge?"
                 },
                 {
                     "english": "Can I have a receipt, please?",
-                    "translation": "Можно мне чек, пожалуйста?"
+                    "translation": "Kya mujhe raseed mil sakti hai, kripya?"
                 },
                 {
                     "english": "Tap your card here.",
-                    "translation": "Приложите карту здесь."
+                    "translation": "Apna card yahan tap karein."
                 },
                 {
                     "english": "Keep the change.",
-                    "translation": "Сдачи не нужно."
+                    "translation": "Baaki paise rakh lijiye."
                 }
             ]
         },
@@ -132,19 +132,19 @@
             "items": [
                 {
                     "english": "I recommend our signature blend.",
-                    "translation": "Я рекомендую нашу фирменную смесь."
+                    "translation": "Main humare signature blend ki salah deta hoon."
                 },
                 {
                     "english": "This drink is very popular today.",
-                    "translation": "Этот напиток сегодня очень популярен."
+                    "translation": "Yeh drink aaj bahut lokpriya hai."
                 },
                 {
                     "english": "It goes great with a blueberry muffin.",
-                    "translation": "Он отлично сочетается с черничным маффином."
+                    "translation": "Yeh blueberry muffin ke saath bahut accha lagta hai."
                 },
                 {
                     "english": "Would you like to try our new seasonal latte?",
-                    "translation": "Хотите попробовать наш новый сезонный латте?"
+                    "translation": "Kya aap humara naya seasonal latte aazmana chahenge?"
                 }
             ]
         },
@@ -154,23 +154,23 @@
             "items": [
                 {
                     "english": "What's the Wi-Fi password?",
-                    "translation": "Какой пароль от Wi-Fi?"
+                    "translation": "Wi-Fi password kya hai?"
                 },
                 {
                     "english": "Where is the restroom?",
-                    "translation": "Где находится туалет?"
+                    "translation": "Restroom kahan hai?"
                 },
                 {
                     "english": "Is this drink dairy-free?",
-                    "translation": "Этот напиток без лактозы?"
+                    "translation": "Kya yeh drink dairy-free hai?"
                 },
                 {
                     "english": "My drink is too cold/hot.",
-                    "translation": "Мой напиток слишком холодный/горячий."
+                    "translation": "Meri drink bahut thandi/garam hai."
                 },
                 {
                     "english": "I ordered a flat white, but this is a cappuccino.",
-                    "translation": "Я заказывал флэт-уайт, а это капучино."
+                    "translation": "Maine flat white order kiya tha, lekin yeh cappuccino hai."
                 }
             ]
         },
@@ -180,19 +180,19 @@
             "items": [
                 {
                     "english": "Enjoy your drink!",
-                    "translation": "Наслаждайтесь вашим напитком!"
+                    "translation": "Apni drink ka anand lein!"
                 },
                 {
                     "english": "Have a wonderful day!",
-                    "translation": "Хорошего вам дня!"
+                    "translation": "Aapka din shaandar rahe!"
                 },
                 {
                     "english": "Thank you for visiting!",
-                    "translation": "Спасибо за визит!"
+                    "translation": "Aane ke liye dhanyawad!"
                 },
                 {
                     "english": "See you next time.",
-                    "translation": "До встречи в следующий раз."
+                    "translation": "Agli baar milte hain."
                 }
             ]
         }

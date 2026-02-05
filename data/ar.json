@@ -1,173 +1,198 @@
 {
     "ui": {
-        "title": "تعلم اللغات",
-        "subtitle": "تعلم الإنجليزية و {{language}}. اضغط على زر التشغيل لسماع النطق الأصلي!",
-        "tabs": {
-            "greetings": "التحيات",
-            "orders": "الطلبات",
-            "recommending": "التوصيات",
-            "confirming": "التأكيد",
-            "serving": "التقديم",
-            "numbers": "الأرقام"
-        },
-        "numberPractice": {
-            "title": "ممارسة الأرقام",
-            "subtitle": "اكتب أي رقم لسماعه بكلتا اللغتين",
-            "placeholder": "اكتب رقماً (مثلاً: 42، 100، 2024)",
-            "englishLabel": "الإنجليزية"
-        },
-        "footer": "استخدام Web Speech API لوظيفة تحويل النص إلى كلام",
-        "language_name": "العربية",
+        "title": "Barista Master Guide",
+        "language_name": "Arabic",
         "language_code": "ar-SA",
         "dir": "rtl"
     },
     "phrases": {
         "greetings": {
-            "title": "التحية والترحيب",
+            "title": "Greetings & Welcome",
+            "icon": "👋",
             "items": [
-                {
-                    "english": "Good morning / Good evening",
-                    "translation": "صباح الخير / مساء الخير"
-                },
-                {
-                    "english": "Hi, how are you?",
-                    "translation": "أهلاً، كيف حالك؟"
-                },
                 {
                     "english": "Welcome to Caribou!",
                     "translation": "مرحباً بكم في كاريبو!"
                 },
                 {
-                    "english": "How can I help you today?",
-                    "translation": "كيف يمكنني مساعدتك اليوم؟"
+                    "english": "Good morning / Good evening",
+                    "translation": "صباح الخير / مساء الخير"
                 },
                 {
-                    "english": "What would you like to order?",
-                    "translation": "ماذا تحب أن تطلب؟"
+                    "english": "Hi, how are you today?",
+                    "translation": "أهلاً، كيف حالك اليوم؟"
+                },
+                {
+                    "english": "How can I help you?",
+                    "translation": "كيف يمكنني مساعدتك؟"
                 }
             ]
         },
-        "orders": {
-            "title": "أخذ الطلبات",
+        "ordering_barista": {
+            "title": "Taking Orders (Barista)",
+            "icon": "☕",
             "items": [
                 {
-                    "english": "What would you like today?",
-                    "translation": "ماذا تفضل اليوم؟"
+                    "english": "What can I get for you?",
+                    "translation": "ماذا يمكنني أن أقدم لك؟"
                 },
                 {
                     "english": "Would you like it hot or iced?",
                     "translation": "هل تريده حاراً أم بارداً؟"
                 },
                 {
-                    "english": "For here or to go?",
-                    "translation": "للأكل هنا أم للخارج؟"
+                    "english": "What size: small, medium, or large?",
+                    "translation": "ما الحجم: صغير، متوسط، أم كبير؟"
                 },
                 {
-                    "english": "What size — small, medium, or large?",
-                    "translation": "ما الحجم - صغير، متوسط، أم كبير؟"
+                    "english": "Any specific milk? We have oats, soy, and almond.",
+                    "translation": "أي حليب معين؟ لدينا شوفان، صويا، ولوز."
                 },
                 {
-                    "english": "With milk or without?",
-                    "translation": "بالحليب أم بدونه؟"
+                    "english": "Would you like extra sugar or sweetener?",
+                    "translation": "هل تريد سكراً إضافياً أو محلياً؟"
                 },
                 {
-                    "english": "Any sugar or sweetener?",
-                    "translation": "هل تريد سكراً أو محلياً؟"
-                },
-                {
-                    "english": "Would you like whipped cream on top?",
+                    "english": "Do you want whipped cream on top?",
                     "translation": "هل تريد كريمة مخفوقة في الأعلى؟"
                 },
                 {
-                    "english": "Anything else?",
-                    "translation": "أي شيء آخر؟"
+                    "english": "Anything else for you?",
+                    "translation": "أي شيء آخر لك؟"
                 },
                 {
-                    "english": "That'll be 18 dirhams, please.",
-                    "translation": "سيكون ذلك 18 درهماً، من فضلك."
-                },
-                {
-                    "english": "You can pay by card or cash.",
-                    "translation": "يمكنك الدفع بالبطاقة أو نقداً."
+                    "english": "For here or to go?",
+                    "translation": "للأكل هنا أم للخارج؟"
                 }
             ]
         },
-        "recommending": {
-            "title": "التوصيات",
+        "ordering_customer": {
+            "title": "Ordering (Customer)",
+            "icon": "👤",
             "items": [
                 {
-                    "english": "Would you like to try our new drink?",
-                    "translation": "هل تود تجربة مشروبنا الجديد؟"
+                    "english": "I'd like a large latte, please.",
+                    "translation": "أود لاتيه كبير، من فضلك."
                 },
                 {
-                    "english": "It's one of our bestsellers.",
-                    "translation": "إنه أحد أكثر أصنافنا مبيعاً."
+                    "english": "Can I have a double shot of espresso?",
+                    "translation": "هل يمكنني الحصول على جرعة مزدوجة من الإسبريسو؟"
                 },
                 {
-                    "english": "It goes well with a muffin.",
-                    "translation": "إنه يتماشى جيداً مع المافن."
+                    "english": "Make it with oat milk, please.",
+                    "translation": "اجعله بحليب الشوفان، من فضلك."
                 },
                 {
-                    "english": "We also have non-dairy milk.",
-                    "translation": "لدينا أيضاً حليب غير ألباني (نباتي)."
+                    "english": "Is there any sugar in this?",
+                    "translation": "هل يوجد سكر في هذا؟"
                 },
                 {
-                    "english": "You can make it extra shot if you like.",
-                    "translation": "يمكنك إضافة جرعة إضافية (إكسترا شوت) إذا أردت."
+                    "english": "I'll have a croissant with my coffee.",
+                    "translation": "سآخذ كرواسون مع قهوتي."
+                },
+                {
+                    "english": "Where can I find the napkins?",
+                    "translation": "أين يمكنني العثور على المناديل؟"
+                },
+                {
+                    "english": "Can I have a sleeve for my cup?",
+                    "translation": "هل يمكنني الحصول على غطاء كرتوني لكوبي؟"
                 }
             ]
         },
-        "confirming": {
-            "title": "التأكيد",
+        "payment": {
+            "title": "Payment & Checkout",
+            "icon": "💳",
             "items": [
                 {
-                    "english": "So, that's one large cappuccino, right?",
-                    "translation": "إذاً، كابتشينو واحد كبير، أليس كذلك؟"
+                    "english": "That will be 25 dirhams.",
+                    "translation": "سيكون ذلك 25 درهماً."
                 },
                 {
-                    "english": "Did you say caramel or vanilla?",
-                    "translation": "هل قلت كراميل أم فانيليا؟"
+                    "english": "Would you like to pay by card or cash?",
+                    "translation": "هل تود الدفع بالبطاقة أم نقداً؟"
                 },
                 {
-                    "english": "Let me confirm your order.",
-                    "translation": "دعني أؤكد طلبك."
+                    "english": "Can I have a receipt, please?",
+                    "translation": "هل يمكنني الحصول على إيصال، من فضلك؟"
                 },
                 {
-                    "english": "Sorry, could you repeat that please?",
-                    "translation": "آسف، هل يمكنك تكرار ذلك من فضلك؟"
+                    "english": "Tap your card here.",
+                    "translation": "اضغط ببطاقتك هنا."
                 },
                 {
-                    "english": "We're out of that for now.",
-                    "translation": "نفد هذا الصنف لدينا حالياً."
-                },
-                {
-                    "english": "I'll check if we still have that.",
-                    "translation": "سأتحقق مما إذا كان لا يزال لدينا ذلك."
+                    "english": "Keep the change.",
+                    "translation": "احتفظ بالباقي."
                 }
             ]
         },
-        "serving": {
-            "title": "التقديم والوداع",
+        "recommendations": {
+            "title": "Barista Suggestions",
+            "icon": "✨",
             "items": [
                 {
-                    "english": "Here's your drink.",
-                    "translation": "تفضل مشروبك."
+                    "english": "I recommend our signature blend.",
+                    "translation": "أوصي بخلطتنا الخاصة."
                 },
                 {
-                    "english": "Enjoy!",
-                    "translation": "استمتع به!"
+                    "english": "This drink is very popular today.",
+                    "translation": "هذا المشروب مشهور جداً اليوم."
                 },
                 {
-                    "english": "Have a nice day!",
-                    "translation": "طاب يومك!"
+                    "english": "It goes great with a blueberry muffin.",
+                    "translation": "إنه يتماشى بشكل رائع مع مافن التوت البري."
                 },
                 {
-                    "english": "Thank you for coming.",
-                    "translation": "شكراً لقدومك."
+                    "english": "Would you like to try our new seasonal latte?",
+                    "translation": "هل تود تجربة اللاتيه الموسمي الجديد؟"
+                }
+            ]
+        },
+        "common_questions": {
+            "title": "Questions & Problems",
+            "icon": "❓",
+            "items": [
+                {
+                    "english": "What's the Wi-Fi password?",
+                    "translation": "ما هي كلمة سر الواي فاي؟"
                 },
                 {
-                    "english": "See you next time!",
-                    "translation": "نراك في المرة القادمة!"
+                    "english": "Where is the restroom?",
+                    "translation": "أين الحمام؟"
+                },
+                {
+                    "english": "Is this drink dairy-free?",
+                    "translation": "هل هذا المشروب خالي من الألبان؟"
+                },
+                {
+                    "english": "My drink is too cold/hot.",
+                    "translation": "مشروبي بارد جداً/حار جداً."
+                },
+                {
+                    "english": "I ordered a flat white, but this is a cappuccino.",
+                    "translation": "طلبت فلات وايت، لكن هذا كابتشينو."
+                }
+            ]
+        },
+        "farewell": {
+            "title": "Farewell & Goodbye",
+            "icon": "👋",
+            "items": [
+                {
+                    "english": "Enjoy your drink!",
+                    "translation": "استمتع بمشروبك!"
+                },
+                {
+                    "english": "Have a wonderful day!",
+                    "translation": "اتمنى لك يوماً رائعاً!"
+                },
+                {
+                    "english": "Thank you for visiting!",
+                    "translation": "شكراً لزيارتكم!"
+                },
+                {
+                    "english": "See you next time.",
+                    "translation": "نراك في المرة القادمة."
                 }
             ]
         }

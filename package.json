@@ -1,0 +1,8 @@
+{
+    "name": "barista-language-learning",
+    "version": "1.0.0",
+    "description": "Vanilla JS Language Learning App for Baristas",
+    "scripts": {
+        "start": "npx serve ."
+    }
+}

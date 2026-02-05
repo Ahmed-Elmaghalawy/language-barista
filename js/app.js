@@ -1,153 +1,138 @@
-let currentData = null;
-let currentLang = 'ar';
+let languages = ['fr', 'ru', 'hi', 'ar']; // Order for fetching
+let langData = {};
 const synth = window.speechSynthesis;
 
-// Simple word mapping helper (can be expanded)
-// In a real app, this might come from the JSON or a dictionary API
-const wordMap = {
-    // English -> Arabic (Sample)
-    "morning": "صباح",
-    "good": "الخير",
-    "evening": "مساء",
-    "welcome": "مرحباً",
-    "help": "مساعدتك",
-    "order": "تطلب",
-    "hot": "حاراً",
-    "iced": "بارداً",
-    "milk": "بالحليب",
-    "sugar": "سكراً",
-    "coffee": "قهوة",
-    "drink": "مشروب",
-    "enjoy": "استمتع",
-    "thanks": "شكراً",
-    // English -> French (Sample)
-    "bonjour": "morning",
-    "bonsoir": "evening",
-    "bienvenue": "welcome",
-    "aider": "help",
-    "commander": "order",
-    "chaud": "hot",
-    "glacé": "iced",
-    "lait": "milk",
-    "sucre": "sugar"
-};
-
-async function changeLanguage(lang) {
-    currentLang = lang;
+async function loadAllData() {
     try {
-        const response = await fetch(`./data/${lang}.json`);
-        currentData = await response.json();
-        updateUI();
+        const promises = languages.map(lang =>
+            fetch(`./data/${lang}.json`).then(res => res.json())
+        );
+        const results = await Promise.all(promises);
+
+        languages.forEach((lang, index) => {
+            langData[lang] = results[index];
+        });
+
+        renderCompactSheet();
+        setupColumnToggles();
     } catch (error) {
-        console.error('Error loading language:', error);
+        console.error('Error loading data:', error);
     }
 }
 
-function updateUI() {
-    if (!currentData) return;
-
-    // Update Buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        if (btn.getAttribute('data-target') === currentLang) {
-            btn.classList.add('bg-blue-600', 'text-white', 'shadow-md');
-            btn.classList.remove('text-slate-600', 'hover:bg-slate-50');
-        } else {
-            btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
-            btn.classList.add('text-slate-600', 'hover:bg-slate-50');
-        }
-    });
-
-    const header = document.getElementById('target-header');
-    header.textContent = `${currentData.ui.language_name} Phrase`;
-
+function renderCompactSheet() {
     const body = document.getElementById('sheet-body');
     body.innerHTML = '';
 
+    const reference = langData['ar'];
+    if (!reference) return;
+
     let rowIndex = 1;
 
-    // Flatten all categories into one sheet
-    Object.keys(currentData.phrases).forEach(catId => {
-        const category = currentData.phrases[catId];
-        category.items.forEach(item => {
-            const row = document.createElement('tr');
-            row.className = "border-b border-slate-100 row-hover transition-colors";
+    Object.keys(reference.phrases).forEach(catId => {
+        const category = reference.phrases[catId];
 
-            // Index
+        const headerRow = document.createElement('tr');
+        headerRow.className = "bg-gray-200 dark:bg-gray-800 text-[10px] font-bold uppercase tracking-tighter text-gray-500 sticky z-10";
+        headerRow.innerHTML = `
+            <td colspan="6" class="px-3 py-1 border-b border-gray-200 dark:border-gray-700">
+                <span class="mr-2">${category.icon}</span>${category.title}
+            </td>
+        `;
+        body.appendChild(headerRow);
+
+        category.items.forEach((item, itemIndex) => {
+            const row = document.createElement('tr');
+            row.className = "hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors border-b border-gray-100 dark:border-gray-800/50";
+
+            // 1. Index (Sticky)
             const tdIndex = document.createElement('td');
-            tdIndex.className = "px-6 py-4 text-sm text-slate-400 font-medium";
+            tdIndex.className = "sticky left-0 bg-white dark:bg-gray-950 px-3 py-2 text-[10px] text-gray-400 border-r border-gray-100 dark:border-gray-800 z-10";
             tdIndex.textContent = rowIndex++;
 
-            // Category
-            const tdCat = document.createElement('td');
-            tdCat.className = "px-6 py-4";
-            tdCat.innerHTML = `<span class="px-2 py-1 rounded-md bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider">${category.title}</span>`;
+            // 2. English (Col 1)
+            const tdEn = createCell(item.english, 'en-US', 'col-1 sticky left-10 bg-white dark:bg-gray-950 border-r z-10 font-bold');
 
-            // English
-            const tdEn = document.createElement('td');
-            tdEn.className = "px-6 py-4 text-slate-900 font-medium";
-            tdEn.appendChild(wrapWords(item.english, 'en-US', 'en', rowIndex));
+            // 3. French (Col 2)
+            const tdFr = createCell(langData['fr'].phrases[catId].items[itemIndex].translation, 'fr-FR', 'col-2');
 
-            // Target
-            const tdTr = document.createElement('td');
-            tdTr.className = `px-6 py-4 font-semibold text-blue-600 ${currentData.ui.dir === 'rtl' ? 'text-right' : 'text-left'}`;
-            tdTr.dir = currentData.ui.dir;
-            tdTr.appendChild(wrapWords(item.translation, currentData.ui.language_code, 'tr', rowIndex));
+            // 4. Russian (Col 3)
+            const tdRu = createCell(langData['ru'].phrases[catId].items[itemIndex].translation, 'ru-RU', 'col-3');
 
-            // Action
-            const tdAction = document.createElement('td');
-            tdAction.className = "px-6 py-4 text-center";
-            tdAction.innerHTML = `
-                <button onclick="speakFull('${item.translation.replace(/'/g, "\\'")}', '${currentData.ui.language_code}')" 
-                        class="p-2 rounded-lg hover:bg-blue-50 text-slate-400 hover:text-blue-600 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                </button>
-            `;
+            // 5. Hindi (Col 4 - Hinglish)
+            const tdHi = createCell(langData['hi'].phrases[catId].items[itemIndex].translation, 'hi-IN', 'col-4');
+
+            // 6. Arabic (Col 5)
+            const tdAr = createCell(item.translation, 'ar-SA', 'col-5 text-right', 'rtl');
 
             row.appendChild(tdIndex);
-            row.appendChild(tdCat);
             row.appendChild(tdEn);
-            row.appendChild(tdTr);
-            row.appendChild(tdAction);
+            row.appendChild(tdFr);
+            row.appendChild(tdRu);
+            row.appendChild(tdHi);
+            row.appendChild(tdAr);
             body.appendChild(row);
         });
     });
 }
 
-/**
- * Wraps each word in a span for individual interaction
- */
-function wrapWords(text, langCode, type, rowId) {
-    const container = document.createElement('div');
-    const words = text.split(/(\s+)/); // Keep spaces
+function createCell(text, langCode, extraClasses = '', dir = 'ltr') {
+    const td = document.createElement('td');
+    td.className = `px-3 py-2 text-[11px] text-gray-700 dark:text-gray-300 ${extraClasses}`;
+    if (dir === 'rtl') {
+        td.dir = 'rtl';
+    }
 
+    const wrapper = document.createElement('div');
+    wrapper.className = "flex items-center gap-1.5";
+    if (dir === 'rtl') wrapper.className += " justify-end";
+
+    // Small speaker icon for full play
+    const speaker = document.createElement('button');
+    speaker.className = "text-gray-300 dark:text-gray-600 hover:text-blue-500 transition-colors shrink-0";
+    speaker.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>`;
+    speaker.onclick = (e) => {
+        e.stopPropagation();
+        speak(text, langCode);
+    };
+
+    const wordsContainer = wrapWords(text, langCode);
+
+    if (dir === 'rtl') {
+        wrapper.appendChild(wordsContainer);
+        wrapper.appendChild(speaker);
+    } else {
+        wrapper.appendChild(speaker);
+        wrapper.appendChild(wordsContainer);
+    }
+
+    td.appendChild(wrapper);
+    return td;
+}
+
+function wrapWords(text, langCode) {
+    const container = document.createElement('div');
+    container.className = "flex flex-wrap gap-x-0.5 leading-tight";
+
+    const words = text.split(' ');
     words.forEach(word => {
-        if (word.trim().length > 0) {
-            const span = document.createElement('span');
-            span.className = "word-span rounded px-0.5";
-            span.textContent = word;
-            span.onclick = (e) => {
-                e.stopPropagation();
-                handleWordClick(word, langCode, type, rowId, span);
-            };
-            container.appendChild(span);
-        } else {
-            container.appendChild(document.createTextNode(word));
-        }
+        const span = document.createElement('span');
+        span.className = "word-span hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-95 transition-all";
+        span.textContent = word;
+        span.onclick = (e) => {
+            e.stopPropagation();
+            speak(word, langCode);
+            document.querySelectorAll('.word-span').forEach(s => s.classList.remove('highlight-word'));
+            span.classList.add('highlight-word');
+        };
+        container.appendChild(span);
     });
 
     return container;
 }
 
-function handleWordClick(word, langCode, type, rowId, element) {
-    // 1. Speak word
-    speakFull(word, langCode);
-
-    // 2. Visual highlight
-    document.querySelectorAll('.word-span').forEach(s => s.classList.remove('highlight-word'));
-    element.classList.add('highlight-word');
-}
-
-function speakFull(text, lang) {
+function speak(text, lang) {
+    if (!text) return;
     synth.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = lang;
@@ -155,7 +140,47 @@ function speakFull(text, lang) {
     synth.speak(utterance);
 }
 
-// Initial load
-document.addEventListener('DOMContentLoaded', () => {
-    changeLanguage('en'); // Default to English initially
-});
+// UI Controllers
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.onclick = () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('minimal-theme', isDark ? 'dark' : 'light');
+};
+
+const colSettingsBtn = document.getElementById('col-settings-btn');
+const colModal = document.getElementById('col-modal');
+colSettingsBtn.onclick = (e) => {
+    e.stopPropagation();
+    colModal.classList.toggle('hidden');
+};
+
+document.body.onclick = () => colModal.classList.add('hidden');
+colModal.onclick = (e) => e.stopPropagation();
+
+function setupColumnToggles() {
+    document.querySelectorAll('.col-toggle').forEach(input => {
+        input.onchange = () => {
+            const colNum = input.dataset.col;
+            const elements = document.querySelectorAll(`.col-${colNum}`);
+            elements.forEach(el => {
+                if (input.checked) el.classList.remove('column-hidden');
+                else el.classList.add('column-hidden');
+            });
+            localStorage.setItem(`col-visible-${colNum}`, input.checked);
+        };
+
+        // Load saved state
+        const saved = localStorage.getItem(`col-visible-${input.dataset.col}`);
+        if (saved === 'false') {
+            input.checked = false;
+            input.dispatchEvent(new Event('change'));
+        }
+    });
+}
+
+if (localStorage.getItem('minimal-theme') === 'dark' ||
+    (!('minimal-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+}
+
+document.addEventListener('DOMContentLoaded', loadAllData);
