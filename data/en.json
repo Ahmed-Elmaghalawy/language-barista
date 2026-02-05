@@ -1,0 +1,175 @@
+{
+    "ui": {
+        "title": "Language Learning",
+        "subtitle": "Learn English and {{language}}. Click the play buttons to hear native pronunciation!",
+        "tabs": {
+            "greetings": "Greetings",
+            "orders": "Orders",
+            "recommending": "Recommending",
+            "confirming": "Confirming",
+            "serving": "Serving",
+            "numbers": "Numbers"
+        },
+        "numberPractice": {
+            "title": "Number Practice",
+            "subtitle": "Type any number to hear it spoken in both languages",
+            "placeholder": "Type a number (e.g., 42, 100, 2024)",
+            "englishLabel": "English"
+        },
+        "footer": "Using Web Speech API for text-to-speech functionality",
+        "language_name": "English",
+        "language_code": "en-US",
+        "dir": "ltr"
+    },
+    "phrases": {
+        "greetings": {
+            "title": "Greetings & Welcoming",
+            "items": [
+                {
+                    "english": "Good morning / Good evening",
+                    "translation": "Good morning / Good evening"
+                },
+                {
+                    "english": "Hi, how are you?",
+                    "translation": "Hi, how are you?"
+                },
+                {
+                    "english": "Welcome to Caribou!",
+                    "translation": "Welcome to Caribou!"
+                },
+                {
+                    "english": "How can I help you today?",
+                    "translation": "How can I help you today?"
+                },
+                {
+                    "english": "What would you like to order?",
+                    "translation": "What would you like to order?"
+                }
+            ]
+        },
+        "orders": {
+            "title": "Taking Orders",
+            "items": [
+                {
+                    "english": "What would you like today?",
+                    "translation": "What would you like today?"
+                },
+                {
+                    "english": "Would you like it hot or iced?",
+                    "translation": "Would you like it hot or iced?"
+                },
+                {
+                    "english": "For here or to go?",
+                    "translation": "For here or to go?"
+                },
+                {
+                    "english": "What size — small, medium, or large?",
+                    "translation": "What size — small, medium, or large?"
+                },
+                {
+                    "english": "With milk or without?",
+                    "translation": "With milk or without?"
+                },
+                {
+                    "english": "Any sugar or sweetener?",
+                    "translation": "Any sugar or sweetener?"
+                },
+                {
+                    "english": "Would you like whipped cream on top?",
+                    "translation": "Would you like whipped cream on top?"
+                },
+                {
+                    "english": "Anything else?",
+                    "translation": "Anything else?"
+                },
+                {
+                    "english": "That'll be 18 dirhams, please.",
+                    "translation": "That'll be 18 dirhams, please."
+                },
+                {
+                    "english": "You can pay by card or cash.",
+                    "translation": "You can pay by card or cash."
+                }
+            ]
+        },
+        "recommending": {
+            "title": "Recommending",
+            "items": [
+                {
+                    "english": "Would you like to try our new drink?",
+                    "translation": "Would you like to try our new drink?"
+                },
+                {
+                    "english": "It's one of our bestsellers.",
+                    "translation": "It's one of our bestsellers."
+                },
+                {
+                    "english": "It goes well with a muffin.",
+                    "translation": "It goes well with a muffin."
+                },
+                {
+                    "english": "We also have non-dairy milk.",
+                    "translation": "We also have non-dairy milk."
+                },
+                {
+                    "english": "You can make it extra shot if you like.",
+                    "translation": "You can make it extra shot if you like."
+                }
+            ]
+        },
+        "confirming": {
+            "title": "Confirming",
+            "items": [
+                {
+                    "english": "So, that's one large cappuccino, right?",
+                    "translation": "So, that's one large cappuccino, right?"
+                },
+                {
+                    "english": "Did you say caramel or vanilla?",
+                    "translation": "Did you say caramel or vanilla?"
+                },
+                {
+                    "english": "Let me confirm your order.",
+                    "translation": "Let me confirm your order."
+                },
+                {
+                    "english": "Sorry, could you repeat that please?",
+                    "translation": "Sorry, could you repeat that please?"
+                },
+                {
+                    "english": "We're out of that for now.",
+                    "translation": "We're out of that for now."
+                },
+                {
+                    "english": "I'll check if we still have that.",
+                    "translation": "I'll check if we still have that."
+                }
+            ]
+        },
+        "serving": {
+            "title": "Serving & Ending",
+            "items": [
+                {
+                    "english": "Here's your drink.",
+                    "translation": "Here's your drink."
+                },
+                {
+                    "english": "Enjoy!",
+                    "translation": "Enjoy!"
+                },
+                {
+                    "english": "Have a nice day!",
+                    "translation": "Have a nice day!"
+                },
+                {
+                    "english": "Thank you for coming.",
+                    "translation": "Thank you for coming."
+                },
+                {
+                    "english": "See you next time!",
+                    "translation": "See you next time!"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,175 @@
+{
+    "ui": {
+        "title": "Изучение языков",
+        "subtitle": "Учите английский и {{language}}. Нажимайте кнопки воспроизведения, чтобы услышать произношение!",
+        "tabs": {
+            "greetings": "Приветствия",
+            "orders": "Заказы",
+            "recommending": "Рекомендации",
+            "confirming": "Подтверждение",
+            "serving": "Обслуживание",
+            "numbers": "Числа"
+        },
+        "numberPractice": {
+            "title": "Практика чисел",
+            "subtitle": "Введите любое число, чтобы услышать его на обоих языках",
+            "placeholder": "Введите число (например, 42, 100, 2024)",
+            "englishLabel": "Английский"
+        },
+        "footer": "Использование Web Speech API для синтеза речи",
+        "language_name": "Русский",
+        "language_code": "ru-RU",
+        "dir": "ltr"
+    },
+    "phrases": {
+        "greetings": {
+            "title": "Приветствия и встреча гостей",
+            "items": [
+                {
+                    "english": "Good morning / Good evening",
+                    "translation": "Доброе утро / Добрый вечер"
+                },
+                {
+                    "english": "Hi, how are you?",
+                    "translation": "Привет, как дела?"
+                },
+                {
+                    "english": "Welcome to Caribou!",
+                    "translation": "Добро пожаловать в Caribou!"
+                },
+                {
+                    "english": "How can I help you today?",
+                    "translation": "Чем я могу вам помочь сегодня?"
+                },
+                {
+                    "english": "What would you like to order?",
+                    "translation": "Что бы вы хотели заказать?"
+                }
+            ]
+        },
+        "orders": {
+            "title": "Прием заказов",
+            "items": [
+                {
+                    "english": "What would you like today?",
+                    "translation": "Что бы вы хотели сегодня?"
+                },
+                {
+                    "english": "Would you like it hot or iced?",
+                    "translation": "Вам горячий или со льдом?"
+                },
+                {
+                    "english": "For here or to go?",
+                    "translation": "Здесь или с собой?"
+                },
+                {
+                    "english": "What size — small, medium, or large?",
+                    "translation": "Какой размер — маленький, средний или большой?"
+                },
+                {
+                    "english": "With milk or without?",
+                    "translation": "С молоком или без?"
+                },
+                {
+                    "english": "Any sugar or sweetener?",
+                    "translation": "Добавить сахар или подсластитель?"
+                },
+                {
+                    "english": "Would you like whipped cream on top?",
+                    "translation": "Хотите взбитые сливки сверху?"
+                },
+                {
+                    "english": "Anything else?",
+                    "translation": "Что-нибудь еще?"
+                },
+                {
+                    "english": "That'll be 18 dirhams, please.",
+                    "translation": "С вас 18 дирхамов, пожалуйста."
+                },
+                {
+                    "english": "You can pay by card or cash.",
+                    "translation": "Вы можете оплатить картой или наличными."
+                }
+            ]
+        },
+        "recommending": {
+            "title": "Рекомендации",
+            "items": [
+                {
+                    "english": "Would you like to try our new drink?",
+                    "translation": "Хотите попробовать наш новый напиток?"
+                },
+                {
+                    "english": "It's one of our bestsellers.",
+                    "translation": "Это один из наших бестселлеров."
+                },
+                {
+                    "english": "It goes well with a muffin.",
+                    "translation": "Он отлично сочетается с маффином."
+                },
+                {
+                    "english": "We also have non-dairy milk.",
+                    "translation": "У нас также есть растительное молоко."
+                },
+                {
+                    "english": "You can make it extra shot if you like.",
+                    "translation": "Вы можете добавить дополнительную порцию эспрессо, если хотите."
+                }
+            ]
+        },
+        "confirming": {
+            "title": "Подтверждение",
+            "items": [
+                {
+                    "english": "So, that's one large cappuccino, right?",
+                    "translation": "Итак, один большой капучино, верно?"
+                },
+                {
+                    "english": "Did you say caramel or vanilla?",
+                    "translation": "Вы сказали карамель или ваниль?"
+                },
+                {
+                    "english": "Let me confirm your order.",
+                    "translation": "Позвольте мне подтвердить ваш заказ."
+                },
+                {
+                    "english": "Sorry, could you repeat that please?",
+                    "translation": "Извините, не могли бы вы повторить?"
+                },
+                {
+                    "english": "We're out of that for now.",
+                    "translation": "У нас это закончилось на данный момент."
+                },
+                {
+                    "english": "I'll check if we still have that.",
+                    "translation": "Я проверю, есть ли это у нас еще."
+                }
+            ]
+        },
+        "serving": {
+            "title": "Обслуживание и прощание",
+            "items": [
+                {
+                    "english": "Here's your drink.",
+                    "translation": "Вот ваш напиток."
+                },
+                {
+                    "english": "Enjoy!",
+                    "translation": "Наслаждайтесь! / Приятного аппетита!"
+                },
+                {
+                    "english": "Have a nice day!",
+                    "translation": "Хорошего дня!"
+                },
+                {
+                    "english": "Thank you for coming.",
+                    "translation": "Спасибо, что пришли."
+                },
+                {
+                    "english": "See you next time!",
+                    "translation": "До следующего раза!"
+                }
+            ]
+        }
+    }
+}
