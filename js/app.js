@@ -1,4 +1,4 @@
-let languages = ['fr', 'ru', 'hi', 'ar']; // Order for fetching
+let languages = ['fr', 'ru', 'hi', 'ar', 'es']; // Order for fetching
 let langData = {};
 const synth = window.speechSynthesis;
 
@@ -35,7 +35,7 @@ function renderCompactSheet() {
         const headerRow = document.createElement('tr');
         headerRow.className = "bg-gray-200 dark:bg-gray-800 text-[10px] font-bold uppercase tracking-tighter text-gray-500 sticky z-10";
         headerRow.innerHTML = `
-            <td colspan="6" class="px-3 py-1 border-b border-gray-200 dark:border-gray-700">
+            <td colspan="7" class="px-3 py-1 border-b border-gray-200 dark:border-gray-700">
                 <span class="mr-2">${category.icon}</span>${category.title}
             </td>
         `;
@@ -56,18 +56,22 @@ function renderCompactSheet() {
             // 3. French (Col 2)
             const tdFr = createCell(langData['fr'].phrases[catId].items[itemIndex].translation, 'fr-FR', 'col-2');
 
-            // 4. Russian (Col 3)
-            const tdRu = createCell(langData['ru'].phrases[catId].items[itemIndex].translation, 'ru-RU', 'col-3');
+            // 4. Spanish (Col 3)
+            const tdEs = createCell(langData['es'].phrases[catId].items[itemIndex].translation, 'es-ES', 'col-3');
 
-            // 5. Hindi (Col 4 - Hinglish)
-            const tdHi = createCell(langData['hi'].phrases[catId].items[itemIndex].translation, 'hi-IN', 'col-4');
+            // 5. Russian (Col 4)
+            const tdRu = createCell(langData['ru'].phrases[catId].items[itemIndex].translation, 'ru-RU', 'col-4');
 
-            // 6. Arabic (Col 5)
-            const tdAr = createCell(item.translation, 'ar-SA', 'col-5 text-right', 'rtl');
+            // 6. Hindi (Col 5 - Hinglish)
+            const tdHi = createCell(langData['hi'].phrases[catId].items[itemIndex].translation, 'hi-IN', 'col-5');
+
+            // 7. Arabic (Col 6)
+            const tdAr = createCell(item.translation, 'ar-SA', 'col-6 text-right', 'rtl');
 
             row.appendChild(tdIndex);
             row.appendChild(tdEn);
             row.appendChild(tdFr);
+            row.appendChild(tdEs);
             row.appendChild(tdRu);
             row.appendChild(tdHi);
             row.appendChild(tdAr);
