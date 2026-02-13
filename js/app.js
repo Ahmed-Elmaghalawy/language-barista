@@ -4,12 +4,12 @@ const synth = window.speechSynthesis;
 
 async function loadAllData() {
     try {
-        const promises = languages.map(lang =>
+        const promises = [...languages, 'en'].map(lang =>
             fetch(`./data/${lang}.json`).then(res => res.json())
         );
         const results = await Promise.all(promises);
 
-        languages.forEach((lang, index) => {
+        [...languages, 'en'].forEach((lang, index) => {
             langData[lang] = results[index];
         });
 
@@ -24,7 +24,7 @@ function renderCompactSheet() {
     const body = document.getElementById('sheet-body');
     body.innerHTML = '';
 
-    const reference = langData['ar'];
+    const reference = langData['en']; // Use English as structure reference
     if (!reference) return;
 
     let rowIndex = 1;
@@ -36,7 +36,7 @@ function renderCompactSheet() {
         headerRow.className = "bg-gray-200 dark:bg-gray-800 text-[10px] font-bold uppercase tracking-tighter text-gray-500 sticky z-10";
         headerRow.innerHTML = `
             <td colspan="7" class="px-3 py-1 border-b border-gray-200 dark:border-gray-700">
-                <span class="mr-2">${category.icon}</span>${category.title}
+                <span class="mr-2">${category.icon || '☕'}</span>${category.title}
             </td>
         `;
         body.appendChild(headerRow);
@@ -44,6 +44,14 @@ function renderCompactSheet() {
         category.items.forEach((item, itemIndex) => {
             const row = document.createElement('tr');
             row.className = "hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors border-b border-gray-100 dark:border-gray-800/50";
+
+            const getTranslation = (lang, cId, iIdx) => {
+                try {
+                    return langData[lang].phrases[cId].items[iIdx].translation || item.english;
+                } catch (e) {
+                    return item.english;
+                }
+            };
 
             // 1. Index (Sticky)
             const tdIndex = document.createElement('td');
@@ -54,19 +62,19 @@ function renderCompactSheet() {
             const tdEn = createCell(item.english, 'en-US', 'col-1 sticky left-10 bg-white dark:bg-gray-950 border-r z-10 font-bold');
 
             // 3. French (Col 2)
-            const tdFr = createCell(langData['fr'].phrases[catId].items[itemIndex].translation, 'fr-FR', 'col-2');
+            const tdFr = createCell(getTranslation('fr', catId, itemIndex), 'fr-FR', 'col-2');
 
             // 4. Spanish (Col 3)
-            const tdEs = createCell(langData['es'].phrases[catId].items[itemIndex].translation, 'es-ES', 'col-3');
+            const tdEs = createCell(getTranslation('es', catId, itemIndex), 'es-ES', 'col-3');
 
             // 5. Russian (Col 4)
-            const tdRu = createCell(langData['ru'].phrases[catId].items[itemIndex].translation, 'ru-RU', 'col-4');
+            const tdRu = createCell(getTranslation('ru', catId, itemIndex), 'ru-RU', 'col-4');
 
             // 6. Hindi (Col 5 - Hinglish)
-            const tdHi = createCell(langData['hi'].phrases[catId].items[itemIndex].translation, 'hi-IN', 'col-5');
+            const tdHi = createCell(getTranslation('hi', catId, itemIndex), 'hi-IN', 'col-5');
 
             // 7. Arabic (Col 6)
-            const tdAr = createCell(item.translation, 'ar-SA', 'col-6 text-right', 'rtl');
+            const tdAr = createCell(getTranslation('ar', catId, itemIndex), 'ar-SA', 'col-6 text-right', 'rtl');
 
             row.appendChild(tdIndex);
             row.appendChild(tdEn);
@@ -166,7 +174,7 @@ function setupColumnToggles() {
 
     document.querySelectorAll('.col-toggle').forEach(input => {
         const colNum = input.dataset.col;
-        
+
         input.onchange = () => {
             const elements = document.querySelectorAll(`.col-${colNum}`);
             elements.forEach(el => {
