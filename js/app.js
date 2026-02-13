@@ -162,22 +162,30 @@ document.body.onclick = () => colModal.classList.add('hidden');
 colModal.onclick = (e) => e.stopPropagation();
 
 function setupColumnToggles() {
+    const STORAGE_KEY_PREFIX = 'vocatabs-col-';
+
     document.querySelectorAll('.col-toggle').forEach(input => {
+        const colNum = input.dataset.col;
+        
         input.onchange = () => {
-            const colNum = input.dataset.col;
             const elements = document.querySelectorAll(`.col-${colNum}`);
             elements.forEach(el => {
                 if (input.checked) el.classList.remove('column-hidden');
                 else el.classList.add('column-hidden');
             });
-            localStorage.setItem(`col-visible-${colNum}`, input.checked);
+            localStorage.setItem(`${STORAGE_KEY_PREFIX}${colNum}`, input.checked);
         };
 
         // Load saved state
-        const saved = localStorage.getItem(`col-visible-${input.dataset.col}`);
-        if (saved === 'false') {
-            input.checked = false;
-            input.dispatchEvent(new Event('change'));
+        const saved = localStorage.getItem(`${STORAGE_KEY_PREFIX}${colNum}`);
+        if (saved !== null) {
+            input.checked = (saved === 'true');
+            // Apply initial state
+            const elements = document.querySelectorAll(`.col-${colNum}`);
+            elements.forEach(el => {
+                if (input.checked) el.classList.remove('column-hidden');
+                else el.classList.add('column-hidden');
+            });
         }
     });
 }
