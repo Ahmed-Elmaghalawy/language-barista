@@ -1,4 +1,4 @@
-let languages = ['fr', 'ru', 'hi', 'ar', 'es']; // Order for fetching
+let languages = ['fr']; // Only French besides English
 let langData = {};
 const synth = window.speechSynthesis;
 

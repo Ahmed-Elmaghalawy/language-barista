@@ -1,14 +1,13 @@
 {
     "ui": {
         "title": "Language Barista",
-        "subtitle": "Professional Language Guide for Baristas. Learn English and other languages.",
+        "subtitle": "Professional Language Guide for Baristas. Learn English and French sentences.",
         "tabs": {
             "greetings": "Greetings",
-            "orders": "Orders",
-            "menu": "Menu",
+            "menu": "Menu & Categories",
             "customization": "Customization",
             "food": "Food & Combos",
-            "service": "Service & Payment"
+            "payment": "Service & Payment"
         },
         "footer": "Using Web Speech API for text-to-speech functionality",
         "language_name": "English",
@@ -25,106 +24,92 @@
                     "translation": "Welcome to our coffee shop!"
                 },
                 {
-                    "english": "Good morning / Good evening",
-                    "translation": "Good morning / Good evening"
+                    "english": "Good morning, how can I help you today?",
+                    "translation": "Good morning, how can I help you today?"
                 },
                 {
-                    "english": "Hi, how are you today?",
-                    "translation": "Hi, how are you today?"
-                },
-                {
-                    "english": "How can I help you?",
-                    "translation": "How can I help you?"
+                    "english": "What can I get started for you?",
+                    "translation": "What can I get started for you?"
                 }
             ]
         },
-        "menu_classic": {
-            "title": "Classic Drinks",
+        "menu_drinks": {
+            "title": "Classic & Specialty Drinks",
             "icon": "☕",
             "items": [
                 {
-                    "english": "Americano",
-                    "translation": "Americano"
+                    "english": "Would you like a hot Americano?",
+                    "translation": "Would you like a hot Americano?"
                 },
                 {
-                    "english": "Cappuccino",
-                    "translation": "Cappuccino"
+                    "english": "I can make a fresh Cappuccino for you.",
+                    "translation": "I can make a fresh Cappuccino for you."
                 },
                 {
-                    "english": "Latte",
-                    "translation": "Latte"
+                    "english": "Would you like a large Latte or a medium one?",
+                    "translation": "Would you like a large Latte or a medium one?"
                 },
                 {
-                    "english": "Flat White",
-                    "translation": "Flat White"
-                }
-            ]
-        },
-        "menu_categories": {
-            "title": "Drink Categories",
-            "icon": "🥤",
-            "items": [
-                {
-                    "english": "Hot drinks",
-                    "translation": "Hot drinks"
+                    "english": "I recommend trying our Flat White.",
+                    "translation": "I recommend trying our Flat White."
                 },
                 {
-                    "english": "Iced drinks",
-                    "translation": "Iced drinks"
+                    "english": "Do you prefer hot drinks or iced drinks?",
+                    "translation": "Do you prefer hot drinks or iced drinks?"
                 },
                 {
-                    "english": "Blended drinks",
-                    "translation": "Blended drinks"
+                    "english": "We also have a variety of blended drinks.",
+                    "translation": "We also have a variety of blended drinks."
                 }
             ]
         },
         "customization": {
-            "title": "Customization & Flavors",
+            "title": "Customization & Flavours",
             "icon": "🎨",
             "items": [
                 {
-                    "english": "With coffee or without coffee?",
-                    "translation": "With coffee or without coffee?"
+                    "english": "Would you like it with coffee or without coffee?",
+                    "translation": "Would you like it with coffee or without coffee?"
                 },
                 {
-                    "english": "I'd like a strong coffee.",
-                    "translation": "I'd like a strong coffee."
+                    "english": "I'd like a strong coffee, please.",
+                    "translation": "I'd like a strong coffee, please."
                 },
                 {
-                    "english": "What type of milk would you like?",
-                    "translation": "What type of milk would you like?"
+                    "english": "What type of milk would you like in your drink?",
+                    "translation": "What type of milk would you like in your drink?"
                 },
                 {
-                    "english": "What flavor would you like?",
-                    "translation": "What flavor would you like?"
+                    "english": "What flavor would you like to add today?",
+                    "translation": "What flavor would you like to add today?"
                 },
                 {
-                    "english": "Caramel / Vanilla",
-                    "translation": "Caramel / Vanilla"
+                    "english": "We have Caramel and Vanilla syrups available.",
+                    "translation": "We have Caramel and Vanilla syrups available."
                 },
                 {
-                    "english": "Sugar-free vanilla / Sugar-free caramel",
-                    "translation": "Sugar-free vanilla / Sugar-free caramel"
+                    "english": "Would you like sugar-free vanilla or sugar-free caramel?",
+                    "translation": "Would you like sugar-free vanilla or sugar-free caramel?"
                 },
                 {
-                    "english": "Raspberry / Mango",
-                    "translation": "Raspberry / Mango"
+                    "english": "We also have Raspberry and Mango flavours.",
+                    "translation": "We also have Raspberry and Mango flavours."
                 },
                 {
-                    "english": "Make it sweet, please.",
-                    "translation": "Make it sweet, please."
+                    "english": "Would you like me to make it sweet?",
+                    "translation": "Would you like me to make it sweet?"
                 },
                 {
-                    "english": "Would you like ice cubes or crushed ice?",
-                    "translation": "Would you like ice cubes or crushed ice?"
+                    "english": "Do you want ice cubes or crushed ice?",
+                    "translation": "Do you want ice cubes or crushed ice?"
                 },
                 {
-                    "english": "Would you like whipped cream on top?",
-                    "translation": "Would you like whipped cream on top?"
+                    "english": "Would you like some whipped cream on top?",
+                    "translation": "Would you like some whipped cream on top?"
                 },
                 {
-                    "english": "Make it warm or room temperature.",
-                    "translation": "Make it warm or room temperature."
+                    "english": "Would you like it warm or at room temperature?",
+                    "translation": "Would you like it warm or at room temperature?"
                 }
             ]
         },
@@ -133,56 +118,46 @@
             "icon": "🥐",
             "items": [
                 {
-                    "english": "Would you like something to eat?",
-                    "translation": "Would you like something to eat?"
+                    "english": "Would you like something to eat with that?",
+                    "translation": "Would you like something to eat with that?"
                 },
                 {
-                    "english": "Sandwiches / Muffin",
-                    "translation": "Sandwiches / Muffin"
+                    "english": "We have fresh sandwiches, muffins, and croissants.",
+                    "translation": "We have fresh sandwiches, muffins, and croissants."
                 },
                 {
-                    "english": "Croissant / Donuts",
-                    "translation": "Croissant / Donuts"
+                    "english": "Would you like to try one of our donuts?",
+                    "translation": "Would you like to try one of our donuts?"
                 },
                 {
-                    "english": "Sandwich combo / Muffin combo",
-                    "translation": "Sandwich combo / Muffin combo"
+                    "english": "Would you like a sandwich combo or a muffin combo?",
+                    "translation": "Would you like a sandwich combo or a muffin combo?"
                 },
                 {
-                    "english": "Donut combo / Lunch combo",
-                    "translation": "Donut combo / Lunch combo"
+                    "english": "We also offer a donut combo and a lunch combo.",
+                    "translation": "We also offer a donut combo and a lunch combo."
                 }
             ]
         },
-        "service_payment": {
+        "payment_service": {
             "title": "Service & Payment",
             "icon": "💳",
             "items": [
                 {
-                    "english": "For here or take away?",
-                    "translation": "For here or take away?"
+                    "english": "Would you like to eat here or take away?",
+                    "translation": "Would you like to eat here or take away?"
                 },
                 {
                     "english": "Would you like to pay by card or cash?",
                     "translation": "Would you like to pay by card or cash?"
                 },
                 {
-                    "english": "Do you want water? Cold or room temperature?",
-                    "translation": "Do you want water? Cold or room temperature?"
-                }
-            ]
-        },
-        "common_questions": {
-            "title": "Common Questions",
-            "icon": "❓",
-            "items": [
-                {
-                    "english": "What's the Wi-Fi password?",
-                    "translation": "What's the Wi-Fi password?"
+                    "english": "Do you want some water? Cold or room temperature?",
+                    "translation": "Do you want some water? Cold or room temperature?"
                 },
                 {
-                    "english": "Where is the restroom?",
-                    "translation": "Where is the restroom?"
+                    "english": "Enjoy your drink!",
+                    "translation": "Enjoy your drink!"
                 }
             ]
         }
