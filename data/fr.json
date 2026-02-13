@@ -1,13 +1,13 @@
 {
     "ui": {
         "title": "Language Barista",
-        "subtitle": "Guide linguistique professionnel pour les baristas. Apprenez des phrases en anglais et en français.",
+        "subtitle": "Guide linguistique professionnel pour les baristas. Apprenez des phrases en anglais et en français (Basique & Avancé).",
         "tabs": {
             "greetings": "Salutations",
-            "menu": "Menu et Catégories",
+            "menu": "Menu et Spécialités",
             "customization": "Personnalisation",
             "food": "Nourriture et Combos",
-            "payment": "Service et Paiement"
+            "advanced": "Service Avancé"
         },
         "language_name": "French",
         "language_code": "fr-FR",
@@ -23,17 +23,25 @@
                     "translation": "Bienvenue dans notre café !"
                 },
                 {
-                    "english": "Good morning, how can I help you today?",
-                    "translation": "Bonjour, comment puis-je vous aider aujourd'hui ?"
+                    "english": "How can I help you today?",
+                    "translation": "Comment puis-je vous aider aujourd'hui ?"
                 },
                 {
                     "english": "What can I get started for you?",
                     "translation": "Que puis-je vous servir pour commencer ?"
+                },
+                {
+                    "english": "It's a pleasure to have you with us. What may I prepare for you?",
+                    "translation": "C'est un plaisir de vous accueillir. Que puis-je vous préparer ?"
+                },
+                {
+                    "english": "Are you joining us for the first time, or would you like your usual?",
+                    "translation": "Est-ce votre première visite ou souhaitez-vous votre commande habituelle ?"
                 }
             ]
         },
         "menu_drinks": {
-            "title": "Boissons Classiques et Spécialités",
+            "title": "Boissons et Spécialités",
             "icon": "☕",
             "items": [
                 {
@@ -41,8 +49,16 @@
                     "translation": "Voulez-vous un americano chaud ?"
                 },
                 {
+                    "english": "Would you prefer a robust Americano or something creamier like a Cappuccino?",
+                    "translation": "Préféreriez-vous un americano corsé ou quelque chose de plus crémeux comme un cappuccino ?"
+                },
+                {
                     "english": "I can make a fresh Cappuccino for you.",
                     "translation": "Je peux vous préparer un cappuccino frais."
+                },
+                {
+                    "english": "Shall I prepare a Cappuccino with our signature blend or the single-origin roast?",
+                    "translation": "Dois-je préparer un cappuccino avec notre mélange signature ou notre café d'origine unique ?"
                 },
                 {
                     "english": "Would you like a large Latte or a medium one?",
@@ -53,12 +69,16 @@
                     "translation": "Je vous recommande d'essayer notre flat white."
                 },
                 {
+                    "english": "If you're looking for a smooth texture, our Flat White is the perfect choice.",
+                    "translation": "Si vous recherchez une texture onctueuse, notre flat white est le choix idéal."
+                },
+                {
                     "english": "Do you prefer hot drinks or iced drinks?",
                     "translation": "Préférez-vous les boissons chaudes ou les boissons glacées ?"
                 },
                 {
                     "english": "We also have a variety of blended drinks.",
-                    "translation": "Nous avons également une variété de boissons mixées."
+                    "translation": "Nous avons également une variété de boissons frappées."
                 }
             ]
         },
@@ -71,12 +91,12 @@
                     "translation": "Le voulez-vous avec ou sans café ?"
                 },
                 {
-                    "english": "I'd like a strong coffee, please.",
-                    "translation": "Je voudrais un café fort, s'il vous plaît."
-                },
-                {
                     "english": "What type of milk would you like in your drink?",
                     "translation": "Quel type de lait voulez-vous dans votre boisson ?"
+                },
+                {
+                    "english": "Would you like to substitute the dairy for oat, soy, or almond milk?",
+                    "translation": "Souhaitez-vous remplacer le lait par du lait d'avoine, de soja ou d'amande ?"
                 },
                 {
                     "english": "What flavor would you like to add today?",
@@ -91,20 +111,28 @@
                     "translation": "Voulez-vous de la vanille sans sucre ou du caramel sans sucre ?"
                 },
                 {
-                    "english": "We also have Raspberry and Mango flavours.",
-                    "translation": "Nous avons aussi des saveurs framboise et mangue."
+                    "english": "Would you prefer our sugar-free syrup options to keep the drink lighter?",
+                    "translation": "Préféreriez-vous nos options de sirops sans sucre pour une boisson plus légère ?"
                 },
                 {
-                    "english": "Would you like me to make it sweet?",
-                    "translation": "Voulez-vous que je le sucre ?"
+                    "english": "We also have Raspberry and Mango flavours.",
+                    "translation": "Nous avons aussi des saveurs framboise et mangue."
                 },
                 {
                     "english": "Do you want ice cubes or crushed ice?",
                     "translation": "Voulez-vous des glaçons ou de la glace pilée ?"
                 },
                 {
+                    "english": "Would you prefer your iced beverage with standard cubes or finely crushed ice?",
+                    "translation": "Préféreriez-vous votre boisson glacée avec des glaçons standards ou de la glace finement pilée ?"
+                },
+                {
                     "english": "Would you like some whipped cream on top?",
                     "translation": "Voulez-vous de la crème chantilly dessus ?"
+                },
+                {
+                    "english": "Shall I top your beverage with a dollop of whipped cream?",
+                    "translation": "Puis-je garnir votre boisson d'une touche de crème chantilly ?"
                 },
                 {
                     "english": "Would you like it warm or at room temperature?",
@@ -121,6 +149,10 @@
                     "translation": "Voulez-vous quelque chose à manger avec ça ?"
                 },
                 {
+                    "english": "May I interest you in a snack or a pastry to accompany your coffee?",
+                    "translation": "Puis-je vous proposer un en-cas ou une pâtisserie pour accompagner votre café ?"
+                },
+                {
                     "english": "We have fresh sandwiches, muffins, and croissants.",
                     "translation": "Nous avons des sandwichs frais, des muffins et des croissants."
                 },
@@ -133,8 +165,8 @@
                     "translation": "Voulez-vous un combo sandwich ou un combo muffin ?"
                 },
                 {
-                    "english": "We also offer a donut combo and a lunch combo.",
-                    "translation": "Nous proposons également un combo donut et un combo déjeuner."
+                    "english": "You can upgrade to a combo for a better value. Would you like to see the options?",
+                    "translation": "Vous pouvez passer à un combo pour un meilleur prix. Voulez-vous voir les options ?"
                 }
             ]
         },
@@ -147,16 +179,32 @@
                     "translation": "Voulez-vous consommer ici ou à emporter ?"
                 },
                 {
+                    "english": "Would you like the drink prepared for here, or should I pack it to go?",
+                    "translation": "Souhaitez-vous consommer sur place ou dois-je préparer votre boisson à emporter ?"
+                },
+                {
                     "english": "Would you like to pay by card or cash?",
                     "translation": "Voulez-vous payer par carte ou en espèces ?"
+                },
+                {
+                    "english": "Which payment method do you prefer, card or cash?",
+                    "translation": "Quel mode de paiement préférez-vous, carte ou espèces ?"
                 },
                 {
                     "english": "Do you want some water? Cold or room temperature?",
                     "translation": "Voulez-vous de l'eau ? Froide ou à température ambiante ?"
                 },
                 {
+                    "english": "Would you like a complimentary glass of water? I have it chilled or at room temperature.",
+                    "translation": "Souhaitez-vous un verre d'eau offert ? Je l'ai fraîche ou à température ambiante."
+                },
+                {
                     "english": "Enjoy your drink!",
                     "translation": "Bonne dégustation !"
+                },
+                {
+                    "english": "We hope you enjoy your beverage. Have a wonderful rest of your day!",
+                    "translation": "Nous espérons que vous apprécierez votre boisson. Passez une excellente fin de journée !"
                 }
             ]
         }

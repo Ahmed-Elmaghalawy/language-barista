@@ -35,7 +35,7 @@ function renderCompactSheet() {
         const headerRow = document.createElement('tr');
         headerRow.className = "bg-gray-200 dark:bg-gray-800 text-[10px] font-bold uppercase tracking-tighter text-gray-500 sticky z-10";
         headerRow.innerHTML = `
-            <td colspan="7" class="px-3 py-1 border-b border-gray-200 dark:border-gray-700">
+            <td colspan="3" class="px-3 py-1 border-b border-gray-200 dark:border-gray-700">
                 <span class="mr-2">${category.icon || '☕'}</span>${category.title}
             </td>
         `;
@@ -64,25 +64,9 @@ function renderCompactSheet() {
             // 3. French (Col 2)
             const tdFr = createCell(getTranslation('fr', catId, itemIndex), 'fr-FR', 'col-2');
 
-            // 4. Spanish (Col 3)
-            const tdEs = createCell(getTranslation('es', catId, itemIndex), 'es-ES', 'col-3');
-
-            // 5. Russian (Col 4)
-            const tdRu = createCell(getTranslation('ru', catId, itemIndex), 'ru-RU', 'col-4');
-
-            // 6. Hindi (Col 5 - Hinglish)
-            const tdHi = createCell(getTranslation('hi', catId, itemIndex), 'hi-IN', 'col-5');
-
-            // 7. Arabic (Col 6)
-            const tdAr = createCell(getTranslation('ar', catId, itemIndex), 'ar-SA', 'col-6 text-right', 'rtl');
-
             row.appendChild(tdIndex);
             row.appendChild(tdEn);
             row.appendChild(tdFr);
-            row.appendChild(tdEs);
-            row.appendChild(tdRu);
-            row.appendChild(tdHi);
-            row.appendChild(tdAr);
             body.appendChild(row);
         });
     });

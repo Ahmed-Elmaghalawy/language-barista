@@ -1,13 +1,13 @@
 {
     "ui": {
         "title": "Language Barista",
-        "subtitle": "Professional Language Guide for Baristas. Learn English and French sentences.",
+        "subtitle": "Professional Language Guide for Baristas. Learn English and French sentences (Basic & Advanced).",
         "tabs": {
             "greetings": "Greetings",
-            "menu": "Menu & Categories",
+            "menu": "Menu & Specialties",
             "customization": "Customization",
             "food": "Food & Combos",
-            "payment": "Service & Payment"
+            "advanced": "Advanced Service"
         },
         "footer": "Using Web Speech API for text-to-speech functionality",
         "language_name": "English",
@@ -24,17 +24,25 @@
                     "translation": "Welcome to our coffee shop!"
                 },
                 {
-                    "english": "Good morning, how can I help you today?",
-                    "translation": "Good morning, how can I help you today?"
+                    "english": "How can I help you today?",
+                    "translation": "How can I help you today?"
                 },
                 {
                     "english": "What can I get started for you?",
                     "translation": "What can I get started for you?"
+                },
+                {
+                    "english": "It's a pleasure to have you with us. What may I prepare for you?",
+                    "translation": "It's a pleasure to have you with us. What may I prepare for you?"
+                },
+                {
+                    "english": "Are you joining us for the first time, or would you like your usual?",
+                    "translation": "Are you joining us for the first time, or would you like your usual?"
                 }
             ]
         },
         "menu_drinks": {
-            "title": "Classic & Specialty Drinks",
+            "title": "Drinks & Specialties",
             "icon": "☕",
             "items": [
                 {
@@ -42,8 +50,16 @@
                     "translation": "Would you like a hot Americano?"
                 },
                 {
+                    "english": "Would you prefer a robust Americano or something creamier like a Cappuccino?",
+                    "translation": "Would you prefer a robust Americano or something creamier like a Cappuccino?"
+                },
+                {
                     "english": "I can make a fresh Cappuccino for you.",
                     "translation": "I can make a fresh Cappuccino for you."
+                },
+                {
+                    "english": "Shall I prepare a Cappuccino with our signature blend or the single-origin roast?",
+                    "translation": "Shall I prepare a Cappuccino with our signature blend or the single-origin roast?"
                 },
                 {
                     "english": "Would you like a large Latte or a medium one?",
@@ -52,6 +68,10 @@
                 {
                     "english": "I recommend trying our Flat White.",
                     "translation": "I recommend trying our Flat White."
+                },
+                {
+                    "english": "If you're looking for a smooth texture, our Flat White is the perfect choice.",
+                    "translation": "If you're looking for a smooth texture, our Flat White is the perfect choice."
                 },
                 {
                     "english": "Do you prefer hot drinks or iced drinks?",
@@ -72,12 +92,12 @@
                     "translation": "Would you like it with coffee or without coffee?"
                 },
                 {
-                    "english": "I'd like a strong coffee, please.",
-                    "translation": "I'd like a strong coffee, please."
-                },
-                {
                     "english": "What type of milk would you like in your drink?",
                     "translation": "What type of milk would you like in your drink?"
+                },
+                {
+                    "english": "Would you like to substitute the dairy for oat, soy, or almond milk?",
+                    "translation": "Would you like to substitute the dairy for oat, soy, or almond milk?"
                 },
                 {
                     "english": "What flavor would you like to add today?",
@@ -92,20 +112,28 @@
                     "translation": "Would you like sugar-free vanilla or sugar-free caramel?"
                 },
                 {
-                    "english": "We also have Raspberry and Mango flavours.",
-                    "translation": "We also have Raspberry and Mango flavours."
+                    "english": "Would you prefer our sugar-free syrup options to keep the drink lighter?",
+                    "translation": "Would you prefer our sugar-free syrup options to keep the drink lighter?"
                 },
                 {
-                    "english": "Would you like me to make it sweet?",
-                    "translation": "Would you like me to make it sweet?"
+                    "english": "We also have Raspberry and Mango flavours.",
+                    "translation": "We also have Raspberry and Mango flavours."
                 },
                 {
                     "english": "Do you want ice cubes or crushed ice?",
                     "translation": "Do you want ice cubes or crushed ice?"
                 },
                 {
+                    "english": "Would you prefer your iced beverage with standard cubes or finely crushed ice?",
+                    "translation": "Would you prefer your iced beverage with standard cubes or finely crushed ice?"
+                },
+                {
                     "english": "Would you like some whipped cream on top?",
                     "translation": "Would you like some whipped cream on top?"
+                },
+                {
+                    "english": "Shall I top your beverage with a dollop of whipped cream?",
+                    "translation": "Shall I top your beverage with a dollop of whipped cream?"
                 },
                 {
                     "english": "Would you like it warm or at room temperature?",
@@ -122,6 +150,10 @@
                     "translation": "Would you like something to eat with that?"
                 },
                 {
+                    "english": "May I interest you in a snack or a pastry to accompany your coffee?",
+                    "translation": "May I interest you in a snack or a pastry to accompany your coffee?"
+                },
+                {
                     "english": "We have fresh sandwiches, muffins, and croissants.",
                     "translation": "We have fresh sandwiches, muffins, and croissants."
                 },
@@ -134,8 +166,8 @@
                     "translation": "Would you like a sandwich combo or a muffin combo?"
                 },
                 {
-                    "english": "We also offer a donut combo and a lunch combo.",
-                    "translation": "We also offer a donut combo and a lunch combo."
+                    "english": "You can upgrade to a combo for a better value. Would you like to see the options?",
+                    "translation": "You can upgrade to a combo for a better value. Would you like to see the options?"
                 }
             ]
         },
@@ -148,16 +180,32 @@
                     "translation": "Would you like to eat here or take away?"
                 },
                 {
+                    "english": "Would you like the drink prepared for here, or should I pack it to go?",
+                    "translation": "Would you like the drink prepared for here, or should I pack it to go?"
+                },
+                {
                     "english": "Would you like to pay by card or cash?",
                     "translation": "Would you like to pay by card or cash?"
+                },
+                {
+                    "english": "Which payment method do you prefer, card or cash?",
+                    "translation": "Which payment method do you prefer, card or cash?"
                 },
                 {
                     "english": "Do you want some water? Cold or room temperature?",
                     "translation": "Do you want some water? Cold or room temperature?"
                 },
                 {
+                    "english": "Would you like a complimentary glass of water? I have it chilled or at room temperature.",
+                    "translation": "Would you like a complimentary glass of water? I have it chilled or at room temperature."
+                },
+                {
                     "english": "Enjoy your drink!",
                     "translation": "Enjoy your drink!"
+                },
+                {
+                    "english": "We hope you enjoy your beverage. Have a wonderful rest of your day!",
+                    "translation": "We hope you enjoy your beverage. Have a wonderful rest of your day!"
                 }
             ]
         }
