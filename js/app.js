@@ -170,7 +170,7 @@ document.body.onclick = () => colModal.classList.add('hidden');
 colModal.onclick = (e) => e.stopPropagation();
 
 function setupColumnToggles() {
-    const STORAGE_KEY_PREFIX = 'vocatabs-col-';
+    const STORAGE_KEY_PREFIX = 'barista-col-';
 
     document.querySelectorAll('.col-toggle').forEach(input => {
         const colNum = input.dataset.col;
