@@ -1,98 +1,92 @@
 {
     "ui": {
         "title": "Language Barista",
-        "subtitle": "Comprehensive Language Guide for Baristas. English and French phrases from Basic to Professional.",
+        "subtitle": "The Ultimate 1-Stop Shop for Coffee Shop Language. [B] = Barista, [C] = Customer.",
         "tabs": {
-            "greetings": "Greetings",
-            "ordering": "Taking Orders",
-            "customization": "Preferences",
-            "food": "Food & Combos",
-            "service": "Service & Payment",
-            "questions": "Questions & Issues"
+            "greetings": "1. Arrival & Greetings",
+            "menu": "2. The Menu & Ordering",
+            "customization": "3. Preferences & Detail",
+            "food": "4. Food & Upselling",
+            "payment": "5. Payment & Loyalty",
+            "waiting": "6. Pickup & Service",
+            "issues": "7. Resolving Problems",
+            "closing": "8. Departure"
         },
-        "footer": "Using Web Speech API for text-to-speech functionality",
+        "footer": "Every interaction you need, from Simple to Professional.",
         "language_name": "English",
         "language_code": "en-US",
         "dir": "ltr"
     },
     "phrases": {
         "greetings": {
-            "title": "Greetings & Welcome",
+            "title": "Arrival & Initial Contact",
             "icon": "👋",
             "items": [
                 {
-                    "english": "Hi, how are you today?",
-                    "translation": "Hi, how are you today?"
+                    "english": "[B] Welcome! What can I get for you?",
+                    "translation": "[B] Welcome! What can I get for you?"
                 },
                 {
-                    "english": "A very warm welcome to you! How may I assist you this morning?",
-                    "translation": "A very warm welcome to you! How may I assist you this morning?"
+                    "english": "[B] Good morning! How may I assist you this morning?",
+                    "translation": "[B] Good morning! How may I assist you this morning?"
                 },
                 {
-                    "english": "Good morning! Welcome to our coffee shop.",
-                    "translation": "Good morning! Welcome to our coffee shop."
+                    "english": "[C] Hi! Can I get a medium latte, please?",
+                    "translation": "[C] Hi! Can I get a medium latte, please?"
                 },
                 {
-                    "english": "It's a pleasure to see you again. Are we doing the usual order today?",
-                    "translation": "It's a pleasure to see you again. Are we doing the usual order today?"
+                    "english": "[C] Hello! Could you give me a moment to look at the menu?",
+                    "translation": "[C] Hello! Could you give me a moment to look at the menu?"
                 },
                 {
-                    "english": "Welcome! How can I help you?",
-                    "translation": "Welcome! How can I help you?"
+                    "english": "[B] Of course, take your time. I'm here when you're ready.",
+                    "translation": "[B] Of course, take your time. I'm here when you're ready."
                 },
                 {
-                    "english": "Welcome back! It's lovely to have you with us again.",
-                    "translation": "Welcome back! It's lovely to have you with us again."
+                    "english": "[B] It's a pleasure to see you again! The usual order today?",
+                    "translation": "[B] It's a pleasure to see you again! The usual order today?"
                 },
                 {
-                    "english": "Hello! What can I get started for you?",
-                    "translation": "Hello! What can I get started for you?"
+                    "english": "[C] Yes, please! You have a great memory.",
+                    "translation": "[C] Yes, please! You have a great memory."
                 }
             ]
         },
-        "ordering": {
-            "title": "Taking Orders",
-            "icon": "☕",
+        "menu": {
+            "title": "Exploring the Menu",
+            "icon": "📜",
             "items": [
                 {
-                    "english": "What would you like to drink?",
-                    "translation": "What would you like to drink?"
+                    "english": "[C] What do you recommend today?",
+                    "translation": "[C] What do you recommend today?"
                 },
                 {
-                    "english": "Which of our handcrafted beverages may I prepare for you today?",
-                    "translation": "Which of our handcrafted beverages may I prepare for you today?"
+                    "english": "[B] Our signature blend is very popular; it has notes of chocolate and nuts.",
+                    "translation": "[B] Our signature blend is very popular; it has notes of chocolate and nuts."
                 },
                 {
-                    "english": "Would you like a hot Americano?",
-                    "translation": "Would you like a hot Americano?"
+                    "english": "[C] Is the Americano very strong?",
+                    "translation": "[C] Is the Americano very strong?"
                 },
                 {
-                    "english": "Would you prefer a robust Americano or something creamier like a Cappuccino?",
-                    "translation": "Would you prefer a robust Americano or something creamier like a Cappuccino?"
+                    "english": "[B] It has two shots of espresso. I can add more water if you prefer it milder.",
+                    "translation": "[B] It has two shots of espresso. I can add more water if you prefer it milder."
                 },
                 {
-                    "english": "I'll have a flat white, please.",
-                    "translation": "I'll have a flat white, please."
+                    "english": "[C] Do you have any seasonal specialties?",
+                    "translation": "[C] Do you have any seasonal specialties?"
                 },
                 {
-                    "english": "May I suggest our signature Flat White? It's exceptionally smooth with our current roast.",
-                    "translation": "May I suggest our signature Flat White? It's exceptionally smooth with our current roast."
+                    "english": "[B] Yes, we currently have a spiced pumpkin latte and a honey cold brew.",
+                    "translation": "[B] Yes, we currently have a spiced pumpkin latte and a honey cold brew."
                 },
                 {
-                    "english": "One latte, please.",
-                    "translation": "One latte, please."
+                    "english": "[C] I'll go with the spiced pumpkin latte, please.",
+                    "translation": "[C] I'll go with the spiced pumpkin latte, please."
                 },
                 {
-                    "english": "Shall I prepare a large Latte for you, or would a medium size be sufficient?",
-                    "translation": "Shall I prepare a large Latte for you, or would a medium size be sufficient?"
-                },
-                {
-                    "english": "Do you want it hot or iced?",
-                    "translation": "Do you want it hot or iced?"
-                },
-                {
-                    "english": "Would you prefer your beverage served steaming hot or over ice?",
-                    "translation": "Would you prefer your beverage served steaming hot or over ice?"
+                    "english": "[B] Excellent choice! That's one of our best-sellers this month.",
+                    "translation": "[B] Excellent choice! That's one of our best-sellers this month."
                 }
             ]
         },
@@ -101,158 +95,218 @@
             "icon": "🎨",
             "items": [
                 {
-                    "english": "What type of milk would you like?",
-                    "translation": "What type of milk would you like?"
+                    "english": "[B] What size would you like? Small, medium, or large?",
+                    "translation": "[B] What size would you like? Small, medium, or large?"
                 },
                 {
-                    "english": "We offer several dairy alternatives; would you prefer oat, soy, or almond milk?",
-                    "translation": "We offer several dairy alternatives; would you prefer oat, soy, or almond milk?"
+                    "english": "[C] A large one, please. I need the extra caffeine today!",
+                    "translation": "[C] A large one, please. I need the extra caffeine today!"
                 },
                 {
-                    "english": "With coffee or without coffee?",
-                    "translation": "With coffee or without coffee?"
+                    "english": "[B] Would you like any specific milk? We have dairy, oat, soy, and almond.",
+                    "translation": "[B] Would you like any specific milk? We have dairy, oat, soy, and almond."
                 },
                 {
-                    "english": "Would you like to add a shot of espresso to your blended drink?",
-                    "translation": "Would you like to add a shot of espresso to your blended drink?"
+                    "english": "[C] I'd like oat milk, please. Is there an extra charge for that?",
+                    "translation": "[C] I'd like oat milk, please. Is there an extra charge for that?"
                 },
                 {
-                    "english": "Any sugar or sweetener?",
-                    "translation": "Any sugar or sweetener?"
+                    "english": "[B] Yes, there is a small surcharge for plant-based alternatives.",
+                    "translation": "[B] Yes, there is a small surcharge for plant-based alternatives."
                 },
                 {
-                    "english": "Would you like to enhance your coffee with one of our house-made syrups?",
-                    "translation": "Would you like to enhance your coffee with one of our house-made syrups?"
+                    "english": "[B] Any flavors or sweeteners? We have vanilla, caramel, and hazelnut.",
+                    "translation": "[B] Any flavors or sweeteners? We have vanilla, caramel, and hazelnut."
                 },
                 {
-                    "english": "Caramel / Vanilla / Raspberry / Mango",
-                    "translation": "Caramel / Vanilla / Raspberry / Mango"
+                    "english": "[C] Can I get two pumps of sugar-free vanilla, please?",
+                    "translation": "[C] Can I get two pumps of sugar-free vanilla, please?"
                 },
                 {
-                    "english": "Sugar-free vanilla or sugar-free caramel?",
-                    "translation": "Sugar-free vanilla or sugar-free caramel?"
+                    "english": "[C] Extra hot, please. My last one cooled down too quickly.",
+                    "translation": "[C] Extra hot, please. My last one cooled down too quickly."
                 },
                 {
-                    "english": "Ice cubes or crushed ice?",
-                    "translation": "Ice cubes or crushed ice?"
+                    "english": "[B] Certainly, I'll steam the milk to 160 degrees for you.",
+                    "translation": "[B] Certainly, I'll steam the milk to 160 degrees for you."
                 },
                 {
-                    "english": "Should I prepare that with standard ice cubes or finely crushed ice for a different texture?",
-                    "translation": "Should I prepare that with standard ice cubes or finely crushed ice for a different texture?"
+                    "english": "[C] Can I have ice cubes or crushed ice in this?",
+                    "translation": "[C] Can I have ice cubes or crushed ice in this?"
                 },
                 {
-                    "english": "Whipped cream on top?",
-                    "translation": "Whipped cream on top?"
+                    "english": "[B] We usually use cubes, but I can certainly do crushed ice if you prefer.",
+                    "translation": "[B] We usually use cubes, but I can certainly do crushed ice if you prefer."
                 },
                 {
-                    "english": "Would you care for a topping of whipped cream to finish your beverage?",
-                    "translation": "Would you care for a topping of whipped cream to finish your beverage?"
+                    "english": "[B] Would you like whipped cream on top?",
+                    "translation": "[B] Would you like whipped cream on top?"
                 },
                 {
-                    "english": "Warm or room temperature?",
-                    "translation": "Warm or room temperature?"
-                },
-                {
-                    "english": "Would you like your milk steamed to a specific temperature?",
-                    "translation": "Would you like your milk steamed to a specific temperature?"
+                    "english": "[C] No whipped cream for me, thank you.",
+                    "translation": "[C] No whipped cream for me, thank you."
                 }
             ]
         },
-        "food_items": {
-            "title": "Food & Combos",
+        "food": {
+            "title": "Food & Upselling",
             "icon": "🥐",
             "items": [
                 {
-                    "english": "Want something to eat?",
-                    "translation": "Want something to eat?"
+                    "english": "[B] Would you like a muffin or croissant to go with that?",
+                    "translation": "[B] Would you like a muffin or croissant to go with that?"
                 },
                 {
-                    "english": "May I interest you in a freshly baked pastry or an artisan sandwich to accompany your coffee?",
-                    "translation": "May I interest you in a freshly baked pastry or an artisan sandwich to accompany your coffee?"
+                    "english": "[C] What flavors of muffins do you have available?",
+                    "translation": "[C] What flavors of muffins do you have available?"
                 },
                 {
-                    "english": "We have sandwiches, muffins, croissants, and donuts.",
-                    "translation": "We have sandwiches, muffins, croissants, and donuts."
+                    "english": "[B] We have blueberry, double chocolate, and lemon poppy seed.",
+                    "translation": "[B] We have blueberry, double chocolate, and lemon poppy seed."
                 },
                 {
-                    "english": "Our croissants are particularly fresh out of the oven if you're looking for a light snack.",
-                    "translation": "Our croissants are particularly fresh out of the oven if you're looking for a light snack."
+                    "english": "[B] If you add a sandwich, I can make it a combo for a better value.",
+                    "translation": "[B] If you add a sandwich, I can make it a combo for a better value."
                 },
                 {
-                    "english": "Muffin combo / Sandwich combo / Donut combo",
-                    "translation": "Muffin combo / Sandwich combo / Donut combo"
+                    "english": "[C] That sounds perfect. I'll take the turkey and cheese sandwich.",
+                    "translation": "[C] That sounds perfect. I'll take the turkey and cheese sandwich."
                 },
                 {
-                    "english": "You can upgrade to a lunch combo for a better value. Would you like to see the options?",
-                    "translation": "You can upgrade to a lunch combo for a better value. Would you like to see the options?"
+                    "english": "[B] Would you like me to toast the sandwich for you?",
+                    "translation": "[B] Would you like me to toast the sandwich for you?"
+                },
+                {
+                    "english": "[C] Yes, please. Make it nice and crispy.",
+                    "translation": "[C] Yes, please. Make it nice and crispy."
                 }
             ]
         },
-        "service": {
-            "title": "Service & Payment",
+        "payment": {
+            "title": "Payment & Rewards",
             "icon": "💳",
             "items": [
                 {
-                    "english": "For here or to go?",
-                    "translation": "For here or to go?"
+                    "english": "[B] That will be 42 dirhams, please.",
+                    "translation": "[B] That will be 42 dirhams, please."
                 },
                 {
-                    "english": "Will you be enjoying your drink in our café, or shall I prepare it to take away?",
-                    "translation": "Will you be enjoying your drink in our café, or shall I prepare it to take away?"
+                    "english": "[C] Can I pay with Apple Pay or credit card?",
+                    "translation": "[C] Can I pay with Apple Pay or credit card?"
                 },
                 {
-                    "english": "Pay by card or cash?",
-                    "translation": "Pay by card or cash?"
+                    "english": "[B] Absolutely, just tap your device or card on the reader here.",
+                    "translation": "[B] Absolutely, just tap your device or card on the reader here."
                 },
                 {
-                    "english": "Which payment method would be most convenient for you today: card or cash?",
-                    "translation": "Which payment method would be most convenient for you today: card or cash?"
+                    "english": "[B] Do you have our loyalty app? You are close to a free drink!",
+                    "translation": "[B] Do you have our loyalty app? You are close to a free drink!"
                 },
                 {
-                    "english": "Do you want some water?",
-                    "translation": "Do you want some water?"
+                    "english": "[C] Let me open it. Could you scan my QR code, please?",
+                    "translation": "[C] Let me open it. Could you scan my QR code, please?"
                 },
                 {
-                    "english": "Would you like a complimentary glass of water? I have it chilled or at room temperature.",
-                    "translation": "Would you like a complimentary glass of water? I have it chilled or at room temperature."
+                    "english": "[B] Would you like a printed receipt or an e-receipt?",
+                    "translation": "[B] Would you like a printed receipt or an e-receipt?"
                 },
                 {
-                    "english": "Have a nice day!",
-                    "translation": "Have a nice day!"
-                },
-                {
-                    "english": "We hope you enjoy your beverage. Have a wonderful rest of your day!",
-                    "translation": "We hope you enjoy your beverage. Have a wonderful rest of your day!"
+                    "english": "[C] No receipt is necessary, thank you.",
+                    "translation": "[C] No receipt is necessary, thank you."
                 }
             ]
         },
-        "questions": {
-            "title": "Questions & Issues",
-            "icon": "❓",
+        "waiting": {
+            "title": "Pickup & Ambience",
+            "icon": "☕",
             "items": [
                 {
-                    "english": "Where is the restroom?",
-                    "translation": "Where is the restroom?"
+                    "english": "[B] I'll call your name when it's ready at the pickup counter.",
+                    "translation": "[B] I'll call your name when it's ready at the pickup counter."
                 },
                 {
-                    "english": "Could you kindly direct me to the nearest restroom?",
-                    "translation": "Could you kindly direct me to the nearest restroom?"
+                    "english": "[C] Excuse me, is the order for 'Sarah' ready yet?",
+                    "translation": "[C] Excuse me, is the order for 'Sarah' ready yet?"
                 },
                 {
-                    "english": "The drink is too hot.",
-                    "translation": "The drink is too hot."
+                    "english": "[B] Almost there, Sarah! I'm just putting the finishing touches on it.",
+                    "translation": "[B] Almost there, Sarah! I'm just putting the finishing touches on it."
                 },
                 {
-                    "english": "I apologize, but I find this beverage a bit too hot to enjoy comfortably.",
-                    "translation": "I apologize, but I find this beverage a bit too hot to enjoy comfortably."
+                    "english": "[C] Can I have the Wi-Fi password, please?",
+                    "translation": "[C] Can I have the Wi-Fi password, please?"
                 },
                 {
-                    "english": "What's the Wi-Fi password?",
-                    "translation": "What's the Wi-Fi password?"
+                    "english": "[B] Certainly! It's printed at the bottom of your receipt.",
+                    "translation": "[B] Certainly! It's printed at the bottom of your receipt."
                 },
                 {
-                    "english": "Could I trouble you for the Wi-Fi password, please?",
-                    "translation": "Could I trouble you for the Wi-Fi password, please?"
+                    "english": "[C] Where can I find the napkins and stirrers?",
+                    "translation": "[C] Where can I find the napkins and stirrers?"
+                },
+                {
+                    "english": "[B] The condiment station is right behind you, next to the water.",
+                    "translation": "[B] The condiment station is right behind you, next to the water."
+                }
+            ]
+        },
+        "issues": {
+            "title": "Resolving Problems",
+            "icon": "⚠️",
+            "items": [
+                {
+                    "english": "[C] Excuse me, I ordered this iced, but it's hot.",
+                    "translation": "[C] Excuse me, I ordered this iced, but it's hot."
+                },
+                {
+                    "english": "[B] I'm so sorry for the mistake. I'll remake that for you immediately.",
+                    "translation": "[B] I'm so sorry for the mistake. I'll remake that for you immediately."
+                },
+                {
+                    "english": "[C] This coffee tastes a bit burnt. Could I get a fresh one?",
+                    "translation": "[C] This coffee tastes a bit burnt. Could I get a fresh one?"
+                },
+                {
+                    "english": "[B] My apologies! Let me brew a fresh cup for you right away.",
+                    "translation": "[B] My apologies! Let me brew a fresh cup for you right away."
+                },
+                {
+                    "english": "[C] I've been waiting for 15 minutes for a plain black coffee.",
+                    "translation": "[C] I've been waiting for 15 minutes for a plain black coffee."
+                },
+                {
+                    "english": "[B] I am deeply sorry for the delay. This one is on the house today.",
+                    "translation": "[B] I am deeply sorry for the delay. This one is on the house today."
+                }
+            ]
+        },
+        "closing": {
+            "title": "Departure & Closing",
+            "icon": "👋",
+            "items": [
+                {
+                    "english": "[B] Enjoy your coffee! Have a wonderful day.",
+                    "translation": "[B] Enjoy your coffee! Have a wonderful day."
+                },
+                {
+                    "english": "[C] Thank you! Have a great shift.",
+                    "translation": "[C] Thank you! Have a great shift."
+                },
+                {
+                    "english": "[B] Have a lovely afternoon, see you next time!",
+                    "translation": "[B] Have a lovely afternoon, see you next time!"
+                },
+                {
+                    "english": "[C] You too! Goodbye.",
+                    "translation": "[C] You too! Goodbye."
+                },
+                {
+                    "english": "[B] We are closing in 10 minutes, just so you know.",
+                    "translation": "[B] We are closing in 10 minutes, just so you know."
+                },
+                {
+                    "english": "[C] No problem, I'll finish up and head out. Thanks!",
+                    "translation": "[C] No problem, I'll finish up and head out. Thanks!"
                 }
             ]
         }
